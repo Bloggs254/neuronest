@@ -18,4 +18,25 @@ nav{font-size:15px}
 dialog p{font-size:14px}
 @media(max-width:760px){.hero-description{font-size:16px}.eyebrow{font-size:11px}.section-heading>p,.service p,.project-copy>p,.steps p,.contact-copy>p:not(.eyebrow),details p{font-size:14px}.service h3{font-size:19px}.service-link,.button,.text-link{font-size:13px}.service-top,.visual-caption,.preview-label,.sample-chip{font-size:9px}.capability-strip p{font-size:13px}.hero-note{font-size:12px}}
 @media(max-width:430px){.hero-description,.service p,.steps p,.contact-copy>p:not(.eyebrow),details p{font-size:15px}.hero h1{letter-spacing:-2px}.stock-table>div{font-size:9px}.inventory-stats small{font-size:9px}}
+/* Higher-contrast brand palette: deep ink, crisp paper, and a vivid lime accent. */
+:root{--ink:#14263b;--forest:#0b2239;--muted:#4d5d70;--paper:#fbfcff;--lime:#d9ff4f;--line:#d6e0e8}
+body{color:var(--ink);background:var(--paper)}
+.header{background:var(--paper)}
+.hero{background:var(--forest)}
+.hero-description,.hero-note{color:#d3e0ea}
+.hero .eyebrow{color:#eff5f8}
+.hero h1 .serif{color:var(--lime)}
+.lime{background:var(--lime);color:#14263b}
+.lime:hover{background:#e6ff88}
+.capability-strip{background:#f2f7fb}
+.capability-strip b,.service-icon,.large-asterisk{color:#007d91}
+.service:hover{background:#eef7fa}
+.service-invite,.service-invite:hover{background:#e5f4f8}
+.work{background:#edf2f7}
+.project{background:#e1eaf1;border-color:#cfdae5}
+.contact{background:#dcefff}
+.contact .eyebrow,.contact-direct span,.local-note{color:#285a73}
+.contact-copy>p:not(.eyebrow){color:#334a60}
+.assistant-launch{background:#0b2239;border-color:#d9ff4f}
+footer{background:#091c30}
 
