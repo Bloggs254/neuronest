@@ -8,6 +8,9 @@ Responsive, buildless marketing website. Serve `dist` over HTTP using `node serv
 - Guided service finder that gathers business/location, challenge and timeline, then transfers a draft into the inquiry form. This is explicitly labeled as a guided experience, not live AI.
 - No client inquiry is stored or sent automatically. Third-party fonts load from Google Fonts; system fonts provide a fallback.
 
+## Interaction model
+See [STATE-MODEL.md](STATE-MODEL.md) for the user-interface state inventory, transition rules, accessibility behavior, and integration boundaries. Keep that document aligned with `dist/app.js` when interaction flows change.
+
 ## Integrations still required
 - Server-side AI provider and approved business knowledge for live chat.
 - WhatsApp Business Platform account, webhook verification, messaging credentials and approved templates where applicable.
@@ -16,7 +19,3 @@ Responsive, buildless marketing website. Serve `dist` over HTTP using `node serv
 - Booking provider / calendar availability.
 
 Do not place API keys in public files. Custom prices, project claims, promises and timelines must be approved by the owner. Inventory preview uses sample data; actual project is in progress. Budget bands are inquiry preferences, not advertised prices. This version does not claim live messaging or completed client results.
-
-
-## GitHub Pages
-GitHub Pages deploys the root-level static bundle through `.github/workflows/pages.yml` on each push to `main`. The `dist/` folder remains the working source copy; keep its files in sync with the root bundle when updating the site.
