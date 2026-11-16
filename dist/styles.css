@@ -53,3 +53,16 @@ footer{background:#091c30}
 @keyframes hero-enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 @keyframes card-drift{0%,100%{translate:0 0}50%{translate:0 -6px}}
 @media(prefers-reduced-motion:reduce){.motion-ready .reveal{opacity:1;transform:none;transition:none}.hero-copy,.card-message,.card-workflow,.card-stock{animation:none}.service,.button,.nav-cta,.assistant-launch{transition:none}.service:hover,.button:hover{transform:none}}
+/* Keep the motion gentle and responsive to intent. */
+.motion-ready .reveal{transform:translateY(12px);transition-duration:.7s}
+.card-message{animation-duration:9s}
+.card-workflow{animation-duration:10s}
+.card-stock{animation-duration:9.5s}
+.service:hover{transform:translateY(-2px);box-shadow:0 8px 18px #102b250c}
+.button:hover{transform:translateY(-1px)}
+.text-link span,.service-link span,.nav-cta span{display:inline-block;transition:transform .22s ease}
+.text-link:hover span,.service-link:hover span,.nav-cta:hover span{transform:translate(2px,-2px)}
+.faq-items summary span{transition:transform .22s ease}
+.faq-items details[open] summary span{transform:rotate(45deg)}
+@media(prefers-reduced-motion:reduce){.text-link span,.service-link span,.nav-cta span,.faq-items summary span{transition:none}.text-link:hover span,.service-link:hover span,.nav-cta:hover span{transform:none}}
+
