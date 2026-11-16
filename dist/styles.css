@@ -39,4 +39,17 @@ body{color:var(--ink);background:var(--paper)}
 .contact-copy>p:not(.eyebrow){color:#334a60}
 .assistant-launch{background:#0b2239;border-color:#d9ff4f}
 footer{background:#091c30}
-
+/* A little motion adds depth without competing with the content. */
+.motion-ready .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+.motion-ready .reveal.is-visible{opacity:1;transform:translateY(0)}
+.hero-copy{animation:hero-enter .75s cubic-bezier(.2,.7,.2,1) both}
+.card-message{animation:card-drift 6s ease-in-out infinite}
+.card-workflow{animation:card-drift 7s ease-in-out -2s infinite reverse}
+.card-stock{animation:card-drift 6.5s ease-in-out -1s infinite}
+.service{transition:background .25s,border-color .25s,transform .25s,box-shadow .25s}
+.service:hover{transform:translateY(-4px);box-shadow:0 12px 26px #102b2510}
+.button,.nav-cta,.assistant-launch{transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.lime:hover{box-shadow:0 7px 22px #d9ff4f44}
+@keyframes hero-enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes card-drift{0%,100%{translate:0 0}50%{translate:0 -6px}}
+@media(prefers-reduced-motion:reduce){.motion-ready .reveal{opacity:1;transform:none;transition:none}.hero-copy,.card-message,.card-workflow,.card-stock{animation:none}.service,.button,.nav-cta,.assistant-launch{transition:none}.service:hover,.button:hover{transform:none}}
