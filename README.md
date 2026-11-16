@@ -1,0 +1,18 @@
+# NeuroNest
+
+Responsive, buildless marketing website. Serve `dist` over HTTP using `node serve.mjs` and open http://127.0.0.1:4173.
+
+## Working features
+- Responsive navigation, service selection, FAQs, privacy dialog.
+- Structured inquiry form with explicit consent, WhatsApp message generation, email drafts, and clipboard copy.
+- Guided service finder that gathers business/location, challenge and timeline, then transfers a draft into the inquiry form. This is explicitly labeled as a guided experience, not live AI.
+- No client inquiry is stored or sent automatically. Third-party fonts load from Google Fonts; system fonts provide a fallback.
+
+## Integrations still required
+- Server-side AI provider and approved business knowledge for live chat.
+- WhatsApp Business Platform account, webhook verification, messaging credentials and approved templates where applicable.
+- Email delivery provider and verified sender, plus a private lead database / shared inbox.
+- Human escalation with delivery tracking, retry handling, access controls, and owner notifications.
+- Booking provider / calendar availability.
+
+Do not place API keys in public files. Custom prices, project claims, promises and timelines must be approved by the owner. Inventory preview uses sample data; actual project is in progress. Budget bands are inquiry preferences, not advertised prices. This version does not claim live messaging or completed client results.
