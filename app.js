@@ -2,6 +2,23 @@
 const $ = (selector) => document.querySelector(selector);
 const form = $('#project-form');
 const serviceSelect = form.elements.service;
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  const revealTargets = document.querySelectorAll('.section-heading,.service,.project,.steps article,.project-form,.faq-items details');
+  document.documentElement.classList.add('motion-ready');
+  revealTargets.forEach((element, index) => {
+    element.classList.add('reveal');
+    if (element.classList.contains('service')) element.style.transitionDelay = `${(index % 3) * 70}ms`;
+  });
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -24px 0px' });
+  revealTargets.forEach(element => revealObserver.observe(element));
+}
 const menu = $('.menu-toggle');
 menu.addEventListener('click', () => { const expanded = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', String(expanded)); $('#nav').classList.toggle('open', expanded); });
 document.querySelectorAll('#nav a').forEach(link => link.addEventListener('click', () => { menu.setAttribute('aria-expanded', 'false'); $('#nav').classList.remove('open'); }));
