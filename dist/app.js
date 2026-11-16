@@ -8,24 +8,7 @@ const prefersReducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 // Interaction machines are intentionally small and local to this static page.
 // DOM attributes/classes are projections of state, not independent sources of truth.
 
-// Progressive enhancement: without IntersectionObserver the content stays visible.
-if (!prefersReducedMotion.matches && 'IntersectionObserver' in window) {
-  const revealTargets = document.querySelectorAll('.section-heading,.service,.project,.steps article,.project-form,.faq-items details');
-  document.documentElement.classList.add('motion-ready');
-  revealTargets.forEach((element, index) => {
-    element.classList.add('reveal');
-    if (element.classList.contains('service')) element.style.transitionDelay = `${(index % 3) * 70}ms`;
-  });
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -24px 0px' });
-  revealTargets.forEach(element => revealObserver.observe(element));
-}
+// Optional motion lives in motion.js; app interactions never depend on GSAP.
 
 // Mobile navigation: closed <-> open. Keep ARIA and visual state in sync.
 const menuButton = $('.menu-toggle');
@@ -49,12 +32,13 @@ window.addEventListener('resize', () => {
 
 // Project inquiry: editing -> prepared -> editing. Any edit invalidates its
 // generated message and channel links so a visitor cannot copy stale details.
-const inquiry = { phase: 'editing', message: '', copy: 'idle' };
+const inquiry = { phase: 'editing', message: '', copy: 'idle', revision: 0 };
 const inquiryResult = $('#inquiry-result');
 const whatsappLink = $('#send-whatsapp');
 const emailLink = $('#send-email');
 const copyStatus = $('#copy-status');
 function invalidateInquiry() {
+  inquiry.revision += 1;
   inquiry.phase = 'editing';
   inquiry.message = '';
   inquiry.copy = 'idle';
@@ -95,6 +79,7 @@ form.addEventListener('submit', event => {
   const challenge = String(data.get('message') || '').trim();
   inquiry.message = `Hello NeuroNest, I'd like to discuss a project.\n\nName: ${name}\nBusiness: ${business}\nEmail: ${email}\nService: ${service}\n\nChallenge / goals:\n${challenge}\n\nBudget range: ${data.get('budget')}\nTimeline: ${data.get('timeline')}`;
   inquiry.phase = 'prepared';
+  inquiry.revision += 1;
   inquiry.copy = 'idle';
 
   whatsappLink.href = 'https://wa.me/254747700610?text=' + encodeURIComponent(inquiry.message);
@@ -108,11 +93,14 @@ form.addEventListener('change', invalidateInquiry);
 
 $('#copy-inquiry').addEventListener('click', async () => {
   if (inquiry.phase !== 'prepared' || !inquiry.message) return;
+  const revision = inquiry.revision;
   try {
     await navigator.clipboard.writeText(inquiry.message);
+    if (inquiry.revision !== revision) return;
     inquiry.copy = 'copied';
     copyStatus.textContent = 'Copied.';
   } catch {
+    if (inquiry.revision !== revision) return;
     inquiry.copy = 'unavailable';
     copyStatus.textContent = 'Copy unavailable. Use WhatsApp or email above.';
   }
@@ -148,7 +136,10 @@ const descriptions = {
 function setGuidePanel(next, { restoreFocus = false } = {}) {
   if (next !== 'closed' && next !== 'open') return;
   guide.panel = next;
-  assistantPanel.hidden = guide.panel === 'closed';
+  const open = guide.panel === 'open';
+  assistantPanel.inert = !open;
+  if (window.NeuroNestMotion?.setPanel) window.NeuroNestMotion.setPanel(assistantPanel, open);
+  else assistantPanel.hidden = !open;
   assistantLaunch.setAttribute('aria-expanded', String(guide.panel === 'open'));
   if (guide.panel === 'open') assistantClose.focus();
   else if (restoreFocus) assistantLaunch.focus();
