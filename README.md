@@ -16,3 +16,7 @@ Responsive, buildless marketing website. Serve `dist` over HTTP using `node serv
 - Booking provider / calendar availability.
 
 Do not place API keys in public files. Custom prices, project claims, promises and timelines must be approved by the owner. Inventory preview uses sample data; actual project is in progress. Budget bands are inquiry preferences, not advertised prices. This version does not claim live messaging or completed client results.
+
+
+## GitHub Pages
+GitHub Pages deploys the root-level static bundle through `.github/workflows/pages.yml` on each push to `main`. The `dist/` folder remains the working source copy; keep its files in sync with the root bundle when updating the site.
