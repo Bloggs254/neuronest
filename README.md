@@ -1,13 +1,13 @@
 # NeuroNest
 
-Responsive, buildless marketing website. Serve `dist` over HTTP using `node serve.mjs` and open http://127.0.0.1:4173.
+Responsive, buildless technology-studio website with a homepage, five service pages, an inventory-project page and a privacy page. Serve `dist` over HTTP using `node serve.mjs` and open http://127.0.0.1:4173.
 
 ## Working features
 - Responsive navigation, service selection, FAQs, privacy dialog.
 - Structured inquiry form with explicit consent, WhatsApp message generation, email drafts, and clipboard copy.
 - Guided service finder that gathers business/location, challenge and timeline, then transfers a draft into the inquiry form. This is explicitly labeled as a guided experience, not live AI.
 - No client inquiry is stored or sent automatically. Manrope and Space Grotesk fonts are served locally, with their SIL Open Font Licenses in `dist/fonts/`.
-- The connected-workflow illustration switches between customer enquiries, stock updates and marketing leads. These are labelled examples; it does not call an AI API, send messages or collect visitor data.
+- The local capability explorer updates service details and a link to the relevant service page. Service pages return to the enquiry form with an allowlisted public service slug; no customer details are placed in URLs.
 - A short, one-time hero entrance uses the locally served GSAP 3.15.0 bundle. The rest of the page remains still. Content and actions remain usable without GSAP, and reduced-motion settings are respected. The guide's optional 170ms open/close transition reverses safely on rapid toggles.
 
 ## Interaction model
@@ -15,7 +15,7 @@ See [STATE-MODEL.md](STATE-MODEL.md) for the user-interface state inventory, tra
 
 ## Development and publication
 
-Edit files in `dist/`, then run `node scripts/sync-public.mjs` to update the repository-root mirrors, including fonts and the workflow example script. GitHub Pages publishes the `dist/` bundle on pushes to `main`; the root copies are retained for compatibility with the existing repository layout. `DESIGN.md` records the current visual direction.
+Edit files in `dist/`, then run `node scripts/sync-public.mjs` to update the repository-root mirrors, including fonts, studio artwork, service pages and project pages. GitHub Pages publishes the `dist/` bundle on pushes to `main`; the root copies are retained for compatibility with the existing repository layout. `DESIGN.md` records the current visual direction.
 
 Run `node --test tests/*.test.mjs` for interaction regressions. These Node DOM/GSAP-adapter tests verify lifecycle and state behavior; they do not replace real-browser layout and visual checks.
 

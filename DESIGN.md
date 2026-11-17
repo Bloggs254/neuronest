@@ -1,17 +1,17 @@
-# NeuroNest: Connected business
+# NeuroNest: Premium technology studio
 
-The 2026-11-17 redesign replaces the previous charcoal, ivory and coral studio direction.
+Approved direction: premium technology studio, polished and distinctive. This full redesign replaces the blue-and-white split hero and the single-page service summary.
 
-Audience: business owners and teams in Kenya and East Africa. Primary job: understand the services and start a project enquiry. Identity: a useful, precise technology partner with a memorable connected-workflow demonstration.
+Audience: businesses in Kenya and East Africa seeking websites, AI assistants, workflow automation, operational software or marketing support. Primary action: begin a useful project conversation. No invented client results, logos, timelines or prices.
 
-Palette: white #ffffff, ink #10182b, electric blue #254bff, blue-white #eaf0ff, cool surface #f1f4f9, muted ink #505d74. Amber and green are reserved for sample inventory status. All CSS colors and fonts use root tokens.
+Identity: deep petrol #082f33, glacier mint #d8eee3, cool white #fbfcfa, silver surface #edf2ef, readable muted teal #526669. Space Grotesk for display, Manrope for body. Both fonts are self-hosted with SIL licenses. Body reading text is generally 16–18px; small interface labels are secondary.
 
-Typography: Space Grotesk for display and product identity; Manrope for reading and controls. Strong size contrast, sentence case and readable line lengths. Both variable fonts are self-hosted under dist/fonts with their SIL Open Font Licenses and source integrity records. Sans-serif fallbacks preserve readability if fonts fail.
+Signature: a commissioned CGI nest sculpture of interlocking brushed aluminum, glacier glass and petrol metal ribbons. This is abstract brand artwork, never represented as client work. Main WebP is approximately 122KB and the mobile version 47KB. The image has a transparent background.
 
-Composition: left-aligned oversized hero headline beside a blue interactive workflow illustration. Services use an open list with problems, capabilities and explicit enquiry actions. A real in-progress inventory concept provides project context. No fabricated testimonials, logos, metrics, pricing or AI availability. The diagram is illustrative, not a live integration.
+Structure: immersive full-width hero, studio introduction, interactive capability explorer, an in-development inventory project, studio process, enquiry form and FAQs. Five detailed service pages, an inventory-project page and privacy page supply substance beyond the homepage. Each service explains uses, possible deliverables, scope and open questions.
 
-Interactions: workflow examples are user-selected pressed buttons; no autoplay. The existing inquiry, mobile navigation, privacy and guide states remain intact. One optional GSAP hero entrance; stable reduced-motion states and no content hidden by default. Mobile is a composed single column rather than a miniature desktop layout.
+Preserved behavior: enquiry review before sending, WhatsApp/email drafts, guide flow and privacy dialog, interrupted-panel safety, mobile navigation, reduced motion and static content fallbacks. The capability explorer is local. Service links preselect only an allowlisted public service slug. No customer information is stored in URLs.
 
-Source of truth: dist/. Run scripts/sync-public.mjs after changing public files. No cloud image tools, native skill engines or hooks are required.
+Motion: one short optional hero entrance. The sculpture does not autoplay or spin. No scroll gating, repeated reveals or mandatory animation. Existing app state remains separate from motion.
 
-Messaging refinement: the hero explicitly names websites, AI and business systems. The supporting sentence names online stores, AI assistants, repetitive-task automation and operational systems. Use service names before abstract brand language. Keep the blue workflow illustration and existing visual identity.
+Buildless source of truth: dist/. scripts/sync-public.mjs mirrors only known public files and directories. Never copy the repository root or audit folders into deployment. No remote skill engine, automatic hook, paid image API or AI messaging integration is needed to serve this website.

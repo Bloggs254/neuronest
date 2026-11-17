@@ -32,6 +32,8 @@ The guide is deterministic copy and form-prefill logic, not an AI service. There
 - `vendor/gsap-3.15.0.min.js`: pinned locally served GSAP core/CSSPlugin bundle. Package integrity and license notice are retained in the vendor folder.
 
 
-## Workflow illustration
+## Capability explorer and service handoff
 
-The demo.js enhancement owns one local state: enquiry, stock, or lead. A button click updates all illustrative fields and aria-pressed together. No autoplay, network requests, customer data or external integrations. The default enquiry example remains readable without JavaScript; the inactive controls are hidden in that mode. It never changes the project form or service-finder state.
+The capability explorer owns one selected-service state. A user-selected button updates the visible details, pressed state, status announcement, service-page link and enquiry action together. No autoplay, remote requests or visitor storage. Without JavaScript, direct links expose all five service pages.
+
+Service detail pages link to the homepage with one public service slug. Only the five known slugs may preselect a service. No name, email or project message is transferred in a URL. Standalone pages have their own local navigation controller; the homepage retains its tested navigation and guide controllers.
