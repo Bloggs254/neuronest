@@ -33,6 +33,9 @@ Run `node --test tests/*.test.mjs` for interaction regressions. These Node DOM/G
 GSAP's original license notice and package-integrity record live in `dist/vendor/`. The optional `scripts/vendor-gsap.py` refreshes that exact pinned package without installing dependencies or running package scripts. Review any version change before updating it.
 
 ## Integrations still required
+
+See [SECURITY.md](SECURITY.md) for the browser policy, deployment restrictions, owner account actions and hosting limitations. CI also checks public bundle boundaries and the recorded vendored GSAP hash. Review policy changes before connecting any external API; the current site deliberately permits no background network connections.
+
 - Server-side AI provider and approved business knowledge for live chat.
 - WhatsApp Business Platform account, webhook verification, messaging credentials and approved templates where applicable.
 - Email delivery provider and verified sender, plus a private lead database / shared inbox.

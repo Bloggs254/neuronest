@@ -18,15 +18,21 @@ const notice = (message, error = false) => {
   $('lab-error').textContent = error ? message : '';
 };
 const paths = {
-  book: '<path d="M8 5h17v23H8a4 4 0 0 1 0-8h17M8 5a4 4 0 0 0-4 4v15m7-12h9m-9 4h6"/>',
-  cup: '<path d="M8 9h15v17H8V9Zm15 3h3a4 4 0 0 1 0 8h-3M11 4v2m5-2v2m5-2v2M5 29h22"/>',
-  bag: '<path d="M6 11h21l-2 18H8L6 11Zm6 1V9a5 5 0 0 1 10 0v3"/>',
-  cable: '<path d="M11 4v6m-3-6h6v7H8V4Zm3 7v4a5 5 0 0 0 10 0V9m-3-5h6v6h-6V4ZM14 20v3a5 5 0 0 1-10 0v-4"/>',
-  box: '<path d="m4 10 12-6 12 6v15l-12 6-12-6V10Zm0 0 12 6 12-6M16 16v15M10 7l12 6"/>'
+  book: 'M8 5h17v23H8a4 4 0 0 1 0-8h17M8 5a4 4 0 0 0-4 4v15m7-12h9m-9 4h6',
+  cup: 'M8 9h15v17H8V9Zm15 3h3a4 4 0 0 1 0 8h-3M11 4v2m5-2v2m5-2v2M5 29h22',
+  bag: 'M6 11h21l-2 18H8L6 11Zm6 1V9a5 5 0 0 1 10 0v3',
+  cable: 'M11 4v6m-3-6h6v7H8V4Zm3 7v4a5 5 0 0 0 10 0V9m-3-5h6v6h-6V4ZM14 20v3a5 5 0 0 1-10 0v-4',
+  box: 'm4 10 12-6 12 6v15l-12 6-12-6V10Zm0 0 12 6 12-6M16 16v15M10 7l12 6'
 };
 const productIcon = type => {
   const node = el('div', '', 'product-art ' + type);
-  node.innerHTML = '<svg viewBox="0 0 34 34" aria-hidden="true">' + (paths[type] || paths.box) + '</svg>';
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', '0 0 34 34');
+  svg.setAttribute('aria-hidden', 'true');
+  const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  path.setAttribute('d', Object.hasOwn(paths, type) ? paths[type] : paths.box);
+  svg.append(path);
+  node.append(svg);
   return node;
 };
 

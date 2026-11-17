@@ -1,0 +1,7 @@
+# Credentials belong outside the repository and public dist bundle.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+node_modules/
