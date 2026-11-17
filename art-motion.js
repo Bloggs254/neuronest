@@ -68,10 +68,15 @@
       if (!entrancePlayed && !document.hidden && visible) {
         entrancePlayed = true;
         // Enter on the wrapper so pointer transforms can respond immediately.
-        entrance = gsap.fromTo(artwork, { y: 12, opacity: 0.94 }, {
-          y: 0, opacity: 1, duration: 0.65, ease: 'power3.out',
-          clearProps: 'transform,opacity'
-        });
+        entrance = gsap.timeline({ defaults: { ease: 'power3.out' } })
+          .fromTo(artwork, { x: 14, y: 24, rotation: 2, scale: 0.98, opacity: 0.96 }, {
+            x: 0, y: -4, rotation: -0.25, scale: 1.002, opacity: 1,
+            duration: 1.05
+          })
+          .to(artwork, {
+            y: 0, rotation: 0, scale: 1, duration: 0.5,
+            ease: 'sine.inOut', clearProps: 'transform,opacity'
+          });
       }
     }
 
