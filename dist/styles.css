@@ -1989,9 +1989,18 @@ summary {
   transition-duration:.01ms!important}
 }
 
-/* Enforce still artwork immediately, including during a media-query transition. */
-@media(max-width:760px),(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce) {
+/* Reduced motion keeps both the arrival wrapper and mouse layer still. */
+@media(prefers-reduced-motion:reduce) {
   .hero-art,.hero-art img {
+    transform:none!important;
+    opacity:1!important;
+    will-change:auto!important;
+  }
+}
+
+/* Phones can play the arrival, but never receive cursor-follow transforms. */
+@media(max-width:760px),(hover:none),(pointer:coarse) {
+  .hero-art img {
     transform:none!important;
     opacity:1!important;
     will-change:auto!important;
