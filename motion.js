@@ -7,7 +7,6 @@
 
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const settings = Object.freeze({ enter: 0.48, panel: 0.17, distance: 10, ease: 'power2.out' });
-  const seen = new WeakSet();
   const active = new Set();
   const panels = new Map();
   let enabled = !reducedMotion.matches;
@@ -117,32 +116,8 @@
         });
       }
 
-      // Only noninteractive headings and the concept illustration get entrances.
-      // Cards, forms and FAQ disclosures never wait for an observer to be usable.
-      const targets = [...document.querySelectorAll('.section-heading,.steps h3,.hero-showcase')];
-      let observer;
-      if ('IntersectionObserver' in window) {
-        observer = new IntersectionObserver(entries => {
-          for (const entry of entries) {
-            if (!entry.isIntersecting || seen.has(entry.target)) continue;
-            observer.unobserve(entry.target);
-            seen.add(entry.target);
-            animate(context, timeline => {
-              timeline.fromTo(entry.target, { y: distance, opacity: 0.9 }, {
-                y: 0, opacity: 1, clearProps: 'transform,opacity'
-              }, 0);
-              const bars = entry.target.querySelectorAll('.showcase-bar i');
-              if (bars.length) timeline.fromTo(bars, { scaleX: 0 }, {
-                scaleX: 1, duration: 0.4, stagger: 0.045,
-                clearProps: 'transform'
-              }, 0.16);
-            });
-          }
-        }, { threshold: 0.08 });
-        for (const target of targets) if (!seen.has(target)) observer.observe(target);
-      }
+      // One authored hero entrance. The rest of the page stays still and readable.
       return () => {
-        observer?.disconnect();
         // matchMedia reverts collected animations; no replay when conditions change.
         active.clear();
       };

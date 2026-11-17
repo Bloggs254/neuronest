@@ -30,3 +30,8 @@ The guide is deterministic copy and form-prefill logic, not an AI service. There
 - `motion.js`: finite hero/heading/bar timelines plus the reversible panel timeline; no form submission, network or inquiry persistence.
 - `styles.css`: static layout and simple hover/focus feedback, with one final reduced-motion override.
 - `vendor/gsap-3.15.0.min.js`: pinned locally served GSAP core/CSSPlugin bundle. Package integrity and license notice are retained in the vendor folder.
+
+
+## Workflow illustration
+
+The demo.js enhancement owns one local state: enquiry, stock, or lead. A button click updates all illustrative fields and aria-pressed together. No autoplay, network requests, customer data or external integrations. The default enquiry example remains readable without JavaScript; the inactive controls are hidden in that mode. It never changes the project form or service-finder state.
