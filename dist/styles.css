@@ -1991,7 +1991,7 @@ summary {
 
 /* Enforce still artwork immediately, including during a media-query transition. */
 @media(max-width:760px),(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce) {
-  .hero-art img {
+  .hero-art,.hero-art img {
     transform:none!important;
     opacity:1!important;
     will-change:auto!important;

@@ -5,15 +5,16 @@
 (() => {
   const gsap = window.gsap;
   const image = document.querySelector('.hero-art img');
+  const artwork = document.querySelector('.hero-art');
   const hero = document.querySelector('.hero-inner');
-  if (!image || !hero || !gsap?.matchMedia || !gsap?.quickTo) return;
+  if (!image || !artwork || !hero || !gsap?.matchMedia || !gsap?.quickTo) return;
 
   let entrancePlayed = false;
   const media = gsap.matchMedia();
   media.add('(min-width: 761px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)', () => {
     const originalStyle = image.getAttribute('style');
     const neutral = { x: 0, y: 0, rotationX: 0, rotationY: 0, rotation: 0 };
-    const easing = { duration: 0.65, ease: 'power3.out' };
+    const easing = { duration: 0.2, ease: 'power2.out' };
     const moves = {
       x: gsap.quickTo(image, 'x', easing),
       y: gsap.quickTo(image, 'y', easing),
@@ -21,21 +22,12 @@
       rotationY: gsap.quickTo(image, 'rotationY', easing)
     };
     let entrance;
-    let frame = 0;
     let bounds;
-    let pointer;
     let ready = false;
     let visible = true;
     let disposed = false;
 
-    function cancelFrame() {
-      if (frame) cancelAnimationFrame(frame);
-      frame = 0;
-      pointer = null;
-    }
-
     function reset(immediate = false) {
-      cancelFrame();
       bounds = null;
       if (immediate) {
         Object.values(moves).forEach(move => move.tween.pause());
@@ -48,15 +40,14 @@
       reset(true);
     }
 
-    function paint() {
-      frame = 0;
-      if (!pointer || disposed || !ready || !visible || document.hidden) return;
+    function paint(event) {
+      if (disposed || !ready || !visible || document.hidden) return;
       // Read once after entry/scroll; subsequent pointer events update transforms only.
       bounds ||= hero.getBoundingClientRect();
       if (!bounds.width || !bounds.height) return;
       const clamp = value => Math.max(-1, Math.min(1, value));
-      const x = clamp((pointer.x - bounds.left) / bounds.width * 2 - 1);
-      const y = clamp((pointer.y - bounds.top) / bounds.height * 2 - 1);
+      const x = clamp((event.clientX - bounds.left) / bounds.width * 2 - 1);
+      const y = clamp((event.clientY - bounds.top) / bounds.height * 2 - 1);
       moves.x(x * 4);
       moves.y(y * 3);
       moves.rotationX(-y * 2);
@@ -65,21 +56,23 @@
 
     function follow(event) {
       if ((event.pointerType && event.pointerType !== 'mouse') || !ready || !visible || document.hidden) return;
-      pointer = { x: event.clientX, y: event.clientY };
-      if (!frame) frame = requestAnimationFrame(paint);
+      // quickTo already renders through GSAP's ticker; another RAF adds latency.
+      paint(event);
     }
 
     function start() {
       if (disposed || !image.naturalWidth) return;
       gsap.set(image, { ...neutral, transformPerspective: 1100, transformOrigin: '50% 50%' });
       image.style.willChange = 'transform';
+      ready = true;
       if (!entrancePlayed && !document.hidden && visible) {
         entrancePlayed = true;
-        entrance = gsap.fromTo(image, { y: 14, rotation: -1, opacity: 0.88 }, {
-          y: 0, rotation: 0, opacity: 1, duration: 1.1, ease: 'power3.out',
-          onComplete: () => { ready = !disposed; }
+        // Enter on the wrapper so pointer transforms can respond immediately.
+        entrance = gsap.fromTo(artwork, { y: 12, opacity: 0.94 }, {
+          y: 0, opacity: 1, duration: 0.65, ease: 'power3.out',
+          clearProps: 'transform,opacity'
         });
-      } else ready = true;
+      }
     }
 
     const leave = () => { if (ready) reset(); };
@@ -105,7 +98,6 @@
 
     return () => {
       disposed = true;
-      cancelFrame();
       entrance?.kill();
       Object.values(moves).forEach(move => move.tween.kill());
       observer?.disconnect();

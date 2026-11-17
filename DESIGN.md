@@ -6,7 +6,7 @@ Audience: businesses in Kenya and East Africa seeking websites, AI assistants, w
 
 Identity: deep petrol #082f33, glacier mint #d8eee3, cool white #fbfcfa, silver surface #edf2ef, readable muted teal #526669. Space Grotesk for display, Manrope for body. Both fonts are self-hosted with SIL licenses. Body reading text is generally 16–18px; small interface labels are secondary.
 
-Signature: a commissioned CGI nest sculpture of interlocking brushed aluminum, glacier glass and petrol metal ribbons. This is abstract brand artwork, never represented as client work. Main WebP is approximately 122KB and the mobile version 47KB. The image has a transparent background. On fine-pointer desktop screens it eases into place once, then responds to the cursor with a maximum 3-degree tilt. It stays still on mobile, coarse-touch and reduced-motion devices.
+Signature: a commissioned CGI nest sculpture of interlocking brushed aluminum, glacier glass and petrol metal ribbons. This is abstract brand artwork, never represented as client work. Main WebP is approximately 122KB and the mobile version 47KB. The image has a transparent background. On fine-pointer desktop screens the wrapper eases into place once over 650ms while the image responds immediately to the cursor, using reused 200ms tweens and a maximum 3-degree tilt. It stays still on mobile, coarse-touch and reduced-motion devices.
 
 Structure: immersive full-width hero, studio introduction, interactive capability explorer, an in-development inventory project, studio process, enquiry form and FAQs. Five detailed service pages, an inventory-project page and privacy page supply substance beyond the homepage. Each service explains uses, possible deliverables, scope and open questions.
 

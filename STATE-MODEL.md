@@ -41,4 +41,4 @@ Service detail pages link to the homepage with one public service slug. Only the
 
 ## Artwork presentation
 
-art-motion.js owns only the hero image transforms. Eligible means desktop width, fine mouse pointer, hover support and no reduced-motion preference. A single entrance leads to pointer-ready state; leaving, scrolling, blur or hiding the tab settles the image. Media changes dispose listeners, queued frames, observer and tweens and restore the original inline style. CSS independently enforces stillness for mobile, touch and reduced motion. This layer never owns guide, enquiry or navigation state.
+art-motion.js owns only the hero image transforms. Eligible means desktop width, fine mouse pointer, hover support and no reduced-motion preference. A short wrapper entrance and the image’s pointer-ready state run independently; leaving, scrolling, blur or hiding the tab settles the image. Media changes dispose listeners, observer and tweens and restore the original inline style. CSS independently enforces stillness for mobile, touch and reduced motion. This layer never owns guide, enquiry or navigation state.
