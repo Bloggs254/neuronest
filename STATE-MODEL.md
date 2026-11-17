@@ -42,3 +42,8 @@ Service detail pages link to the homepage with one public service slug. Only the
 ## Artwork presentation
 
 art-motion.js owns only the hero image transforms. Arrival eligibility means no reduced-motion preference and at least 12% of the artwork visible. Cursor eligibility additionally requires desktop width, fine mouse pointer and hover support. A one-time wrapper arrival (lift and turn, then a soft settle) and the image’s pointer-ready state run independently; leaving, scrolling, blur or hiding the tab settles the image. Media changes dispose listeners, observer and tweens and restore the original inline style. CSS independently keeps the image’s cursor layer still on mobile/touch and keeps both layers still with reduced motion. This layer never owns guide, enquiry or navigation state.
+
+
+## Studio-demo state
+
+lab-core.js contains deterministic business rules; lab.js owns the page-local controllers. Shopfront basket edits invalidate a prepared order. Stockroom applies validated immutable stock movements and unique-SKU product additions before rendering. Frontdesk uses approved scripted answers or handover, with summaries prepared only by explicit action. Flowboard edits invalidate every prior task/draft and approval. Campaign Kit edits invalidate the generated brief and link. Copy completion checks the current value to avoid stale feedback. All state is in memory; reset/reload restores samples. No demo sends requests, payments, messages or ads.

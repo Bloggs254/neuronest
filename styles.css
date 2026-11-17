@@ -1211,7 +1211,8 @@ dialog a  {
   
   display:none!important}
 
-
+
+
 
 .studio-footer {
   background:var(--petrol);
@@ -2005,5 +2006,131 @@ summary {
     opacity:1!important;
     will-change:auto!important;
   }
+}
+
+
+/* Original studio builds: genuine interactive demos, not invented client proof. */
+.showcase-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:55px 45px}
+.showcase-item {
+  min-width:0}
+.showcase-image {
+  display:block;
+  aspect-ratio:3/2;
+  background:var(--surface);
+  border-radius:var(--radius);
+  overflow:hidden}
+.showcase-image img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:top;
+  transition:transform .25s}
+.showcase-image:hover img {
+  transform:scale(1.015)}
+.showcase-meta {
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  margin-top:19px;
+  color:var(--muted);
+  font-size:11px}
+.showcase-item h3 {
+  font-size:31px;
+  margin-top:11px}
+.showcase-item h3 a {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px}
+.showcase-item h3 svg {
+  width:23px}
+.showcase-item>p {
+  font-size:15px;
+  color:var(--muted);
+  margin-top:14px;
+  max-width:56ch}
+.showcase-more {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
+  border-top:1px solid var(--line);
+  margin-top:45px;
+  padding-top:25px}
+.showcase-more p {
+  font-size:13px;
+  color:var(--muted);
+  max-width:600px}
+.service-demo {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:65px;
+  background:var(--surface);
+  align-items:center}
+.service-demo h2 {
+  font-size:44px}
+.service-demo p {
+  color:var(--muted);
+  font-size:17px;
+  margin-top:24px}
+.service-demo .text-link {
+  margin-top:20px}
+.service-demo img {
+  border-radius:var(--radius);
+  display:block;
+  width:100%}
+.prototype-link {
+  background:var(--surface);
+  padding-block:65px}
+.prototype-link h2 {
+  font-size:43px}
+.prototype-link p {
+  font-size:17px;
+  color:var(--muted);
+  max-width:720px;
+  margin:24px 0}
+.showcase-hub {
+  padding-top:0}
+
+@media(max-width:760px) {
+  .showcase-grid {
+  gap:40px 25px}
+.showcase-meta {
+  flex-direction:column;
+  gap:3px;
+  font-size:11px}
+.showcase-item h3 {
+  font-size:27px}
+.showcase-item>p {
+  font-size:14px}
+.showcase-more {
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px}
+.service-demo {
+  grid-template-columns:1fr;
+  gap:30px}
+.service-demo h2 {
+  font-size:39px}
+.prototype-link h2 {
+  font-size:38px}
+}
+
+@media(max-width:520px) {
+  .showcase-grid {
+  grid-template-columns:1fr;
+  gap:38px}
+.showcase-meta {
+  flex-direction:row;
+  font-size:10px}
+.showcase-item h3 {
+  font-size:29px}
+.showcase-item>p {
+  font-size:15px}
+.showcase-more .text-link {
+  font-size:13px}
 }
 

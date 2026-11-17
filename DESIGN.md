@@ -15,3 +15,5 @@ Preserved behavior: enquiry review before sending, WhatsApp/email drafts, guide 
 Motion: one short optional hero entrance. The sculpture has no continuous spin or float loop. Its optional entrance and pointer motion are isolated in art-motion.js, reset when inactive and removed when media conditions change. No scroll gating, repeated reveals or mandatory animation. Existing app state remains separate from motion.
 
 Buildless source of truth: dist/. scripts/sync-public.mjs mirrors only known public files and directories. Never copy the repository root or audit folders into deployment. No remote skill engine, automatic hook, paid image API or AI messaging integration is needed to serve this website.
+
+Showcase expansion: the homepage gallery and work/index.html now present five original interactive studio builds across the company’s capabilities. Screenshots come from the actual demo interfaces. Each demo declares its scope, sample data and production requirements; no fictional client or result is presented as real. The inventory project retains its in-development status and links to the working Stockroom browser prototype.

@@ -1,6 +1,6 @@
 # NeuroNest
 
-Responsive, buildless technology-studio website with a homepage, five service pages, an inventory-project page and a privacy page. Serve `dist` over HTTP using `node serve.mjs` and open http://127.0.0.1:4173.
+Responsive, buildless technology-studio website with a homepage, five service pages, a studio-demo hub, five working demo pages, an inventory-project page and a privacy page. Serve `dist` over HTTP using `node serve.mjs` and open http://127.0.0.1:4173.
 
 ## Working features
 - Responsive navigation, service selection, FAQs, privacy dialog.
@@ -10,6 +10,16 @@ Responsive, buildless technology-studio website with a homepage, five service pa
 - The local capability explorer updates service details and a link to the relevant service page. Service pages return to the enquiry form with an allowlisted public service slug; no customer details are placed in URLs.
 - The hero artwork has a one-time arrival when it enters view: a small lift, restrained turn and soft settle (1.2 seconds on phones; 1.55 seconds on desktop) and a cursor-responsive tilt capped at 3 degrees. The entrance runs on the wrapper so pointer response is available immediately; reused 200ms tweens follow the mouse without an additional animation-frame queue. Phones and touch devices receive the arrival without cursor tracking. Reduced-motion visitors see a still image. Motion resets on pointer leave, scroll, blur or a hidden tab; no animation loop runs while idle.
 - A short, one-time hero text entrance uses the locally served GSAP 3.15.0 bundle. The rest of the page remains still. Content and actions remain usable without GSAP, and reduced-motion settings are respected. The guide's optional 170ms open/close transition reverses safely on rapid toggles.
+
+## Studio demos
+
+- Shopfront: sample catalogue, search, basket and reviewable order enquiry.
+- Frontdesk: scripted approved answers and human-handover summary; not live AI.
+- Flowboard: local enquiry-to-task-and-draft workflow with approval and invalidation.
+- Stockroom: browser inventory prototype with stock movements and product validation.
+- Campaign Kit: template-based campaign brief, tracking URL and text export.
+
+All use sample data and in-memory state. Nothing is purchased, sent or published. Changes reset on reload. For production, backend services, real accounts, privacy and operations must be scoped separately. These are original studio demos rather than customer case studies.
 
 ## Interaction model
 See [STATE-MODEL.md](STATE-MODEL.md) for the user-interface state inventory, transition rules, accessibility behavior, and integration boundaries. Keep that document aligned with `dist/app.js` when interaction flows change.
