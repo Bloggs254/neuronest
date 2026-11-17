@@ -1,3 +1,4 @@
+import { stockroom } from './stockroom.js';
 import { sampleProducts, money, cartSummary, moveStock, addProduct, supportReply, buildWorkflow, approveWorkflow, campaignBrief } from './lab-core.js';
 
 const $ = id => document.getElementById(id);
@@ -98,68 +99,6 @@ function shopfront() {
   });
   $('reset-demo').addEventListener('click', () => { quantities = {}; invalidate(); renderBasket(); notice('Sample basket reset.'); });
   renderProducts(); renderBasket();
-}
-
-function stockroom() {
-  let products = sampleProducts.map(p => ({ ...p }));
-  let movements = [];
-  function render() {
-    $('stock-lines').textContent = String(products.length);
-    $('stock-low').textContent = String(products.filter(p => p.stock <= p.reorder).length);
-    $('stock-value').textContent = money(products.reduce((sum, p) => sum + p.stock * p.price, 0));
-    const query = $('stock-search').value.trim().toLowerCase();
-    const visible = products.filter(p => (p.name + ' ' + p.sku).toLowerCase().includes(query) && (!$('low-only').checked || p.stock <= p.reorder));
-    $('stock-rows').replaceChildren(...visible.map(product => {
-      const row = el('tr');
-      const label = el('th'); label.scope = 'row';
-      label.append(el('strong', product.name), el('small', product.sku));
-      const status = el('td'); status.append(el('span', product.stock <= product.reorder ? 'Review stock' : 'In stock', product.stock <= product.reorder ? 'demo-badge warm' : 'demo-badge'));
-      row.append(label, el('td', product.category), el('td', String(product.stock)), el('td', String(product.reorder)), status);
-      return row;
-    }));
-    $('stock-empty').hidden = visible.length > 0;
-    const selected = $('movement-product').value;
-    $('movement-product').replaceChildren(...products.map(p => {
-      const option = el('option', p.name); option.value = p.id; return option;
-    }));
-    if (products.some(p => p.id === selected)) $('movement-product').value = selected;
-    $('movement-list').replaceChildren(...movements.slice().reverse().map(m => {
-      const item = el('li');
-      item.append(el('strong', `${m.product}: ${m.direction === 'in' ? '+' : '−'}${m.quantity}`), el('span', m.note || (m.direction === 'in' ? 'Stock received' : 'Stock issued')));
-      return item;
-    }));
-    $('movement-empty').hidden = movements.length > 0;
-  }
-  $('stock-search').addEventListener('input', render);
-  $('low-only').addEventListener('change', render);
-  $('movement-form').addEventListener('submit', event => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    if (!form.reportValidity()) return;
-    try {
-      const result = moveStock(products, { productId: form.elements.product.value, direction: form.elements.direction.value, quantity: form.elements.quantity.value, note: form.elements.note.value });
-      products = result.products; movements.push(result.movement); render();
-      form.elements.quantity.value = ''; form.elements.note.value = '';
-      notice('Sample stock movement recorded.');
-    } catch (error) { notice(error.message, true); }
-  });
-  $('add-product-form').addEventListener('submit', event => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    if (!form.reportValidity()) return;
-    try {
-      const fields = Object.fromEntries(new FormData(form));
-      products = addProduct(products, fields); render(); form.reset();
-      notice('Sample product added to this workspace.');
-    } catch (error) { notice(error.message, true); }
-  });
-  $('reset-demo').addEventListener('click', () => {
-    products = sampleProducts.map(p => ({ ...p })); movements = [];
-    $('stock-search').value = ''; $('low-only').checked = false;
-    $('movement-form').reset(); $('add-product-form').reset(); render();
-    notice('Sample workspace restored.');
-  });
-  render();
 }
 
 function frontdesk() {

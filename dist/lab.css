@@ -820,3 +820,18 @@
  [data-lab=campaign-kit] .campaign-preview{padding:24px 20px}
  [data-lab=campaign-kit] .campaign-preview h4{font-size:34px}
 }
+
+.stock-workspaces{padding-bottom:22px;margin-bottom:24px;border-bottom:1px solid var(--line)}
+.stock-workspaces .lab-actions{margin:0 0 14px}
+.stock-workspaces [aria-pressed=true]{background:var(--petrol);color:var(--on-blue);border-color:var(--petrol)}
+.stock-workspaces #stock-mode{font-weight:650;color:var(--ink)}
+.stock-editor{margin-top:25px;background:var(--surface)}
+.stock-editor>p{margin-bottom:18px}
+.stock-backups{padding-block:24px;border-top:1px solid var(--line);margin-top:30px}
+.stock-backups summary{font-size:18px;font-weight:600}
+.stock-import{margin-top:26px;max-width:500px}
+.stock-import input{width:100%;margin-top:10px}
+.stock-backups #restore-preview{margin-top:20px}
+[data-lab=stockroom] .lab-stock-table{min-width:660px}
+
+[data-lab=stockroom] .stock-metrics strong,.movement-list li,.stock-editor p{overflow-wrap:anywhere}

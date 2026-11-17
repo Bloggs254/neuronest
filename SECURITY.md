@@ -1,6 +1,6 @@
 # Security boundaries
 
-NeuroNest is a static public website, not a production inventory system or live customer assistant. Enquiries are prepared locally and handed to WhatsApp or the visitor's email application only when they choose. No account credentials belong in the public bundle.
+NeuroNest is a static public website with a single-browser inventory tool, not a shared production inventory service or live customer assistant. Enquiries are prepared locally and handed to WhatsApp or the visitor's email application only when they choose. No account credentials belong in the public bundle. Stockroom stores inventory in localStorage only when My saved records is selected. It has no encryption or cloud sync; same-origin scripts can access it. Do not use shared devices or enter sensitive personal records. Optional website feedback is prepared locally and sent only by the visitor through their email application.
 
 ## Browser protections
 
@@ -28,3 +28,9 @@ Weekly Dependabot pull requests propose action updates; they are not automatical
 Send a private description to neuronest@gmail.com. Do not include passwords, personal customer records or working credentials in public issues. If a credential is exposed, revoke or rotate it promptly; removing it from a later commit is insufficient.
 
 References: [GitHub Actions secure use](https://docs.github.com/en/actions/reference/security/secure-use), [OWASP CSP guidance](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html), [MDN frame-ancestors limitations](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors).
+
+## Stockroom release safeguards
+
+Stockroom validates imported JSON against a versioned schema, record/byte limits, unique SKUs and IDs, balancing movement history and current quantities. Rendering uses text/SVG DOM APIs. Restoring requires a reviewed replacement action, offers download of existing saved records and checks for stale browser data before writing. Web Locks serialize this application’s writes where supported, with raw-data comparisons and storage-event warnings as additional conflict checks. These are local browser safeguards, not multi-user transactions or authentication. Exported CSV neutralises formula-like text. Save failure preserves the previous visible/saved state. Backups are the user’s responsibility.
+
+Analytics remains disconnected. OWNER-SETUP.md documents the provider/account dependency and the required future privacy/CSP review; the existing connect-src policy has not been loosened.

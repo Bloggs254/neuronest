@@ -2190,3 +2190,15 @@ summary {
  .capability-controls button strong{font-size:19px}
  .capability-controls button small{margin-top:4px}
 }
+
+/* Optional feedback stays behind a single footer disclosure. */
+.site-feedback{border-top:1px solid var(--blue-line);padding-block:22px;margin-bottom:25px}
+.site-feedback summary{font-size:16px;width:fit-content;cursor:pointer}
+.site-feedback form{max-width:650px;margin-top:26px}
+.site-feedback h3{font-size:26px;margin-bottom:12px}
+.site-feedback p{font-size:15px;color:var(--on-blue-muted);margin-bottom:22px}
+.site-feedback label{display:block;font-size:16px;margin-block:22px 8px}
+.site-feedback textarea,.site-feedback select{display:block;width:100%;margin-top:8px;background:var(--paper);color:var(--ink)}
+.site-feedback .feedback-note{margin-top:16px}
+.site-feedback #feedback-error{color:#ffdfad}
+.site-feedback #feedback-result{margin-top:25px}
