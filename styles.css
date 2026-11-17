@@ -2128,4 +2128,25 @@ summary {
 
 .selected-work{padding-block:80px}
 .selected-work .section-heading{margin-bottom:38px}
+
+/* Comfortable desktop reading; compact product diagrams keep their own scale. */
+@media(min-width:761px){
+  body{font-weight:450}
+  .header nav{font-size:16px;gap:25px;font-weight:550}
+  .section-heading>p{font-size:18px;max-width:36ch}
+  .capability-content>p,.contact-copy>p,.steps p{font-size:18px}
+  .capability-content li,.capability-actions .text-link,.capability-help,
+  .project-form label,.selected-work-grid figcaption p,
+  .selected-work-foot p,.selected-work-foot .text-link,
+  .footer-services,.footer-contact,.footer-contact p,.footer-grid>div>p{font-size:16px}
+  .project-form input,.project-form select,.project-form textarea{font-size:17px;font-weight:500}
+  .selected-work-grid figcaption>span,.contact-copy .contact-local{font-size:14px}
+  .detail-purpose p,.detail-next p,.deliverable-list p{font-size:18px}
+  .examples th,.examples td{font-size:16px}
+  .examples thead th{font-size:14px}
+}
+@media(min-width:761px) and (max-width:1100px){
+  .header nav{gap:18px}
+  .header nav .nav-cta{padding-inline:15px}
+}
 @media(max-width:760px){.selected-work{padding-block:60px}}

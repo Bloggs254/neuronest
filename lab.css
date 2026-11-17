@@ -662,3 +662,161 @@
   font-size:29px}
 }
 
+
+/* Demo identities are local to the product canvas, not the NeuroNest chrome. */
+.page-lab .lab-shell{font-weight:500;color:var(--ink)}
+.page-lab .lab-shell-heading p{font-size:14px}
+.page-lab .lab-app p,.page-lab .lab-app label{font-size:15px}
+.page-lab .lab-app input,.page-lab .lab-app select,.page-lab .lab-app textarea{font-size:16px}
+.page-lab .lab-button{font-size:14px}
+.page-lab .lab-tip{font-size:14px!important}
+.page-lab .lab-memory-note{font-size:13px;max-width:none}
+.page-lab .lab-shell input,.page-lab .lab-shell textarea{caret-color:var(--blue)}
+.page-lab .lab-shell ::selection{background:var(--blue-light);color:var(--ink)}
+.page-lab .lab-shell :focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.page-lab .lab-shell input::placeholder,.page-lab .lab-shell textarea::placeholder{color:var(--muted);opacity:1}
+.page-lab .lab-shell{scrollbar-color:var(--line) var(--paper)}
+
+/* Everyday Goods — a warm, pared-back retail catalogue. */
+[data-lab=shopfront] .lab-demo-section{background:#eee7dc}
+[data-lab=shopfront] .lab-shell{
+ --ink:#352c25;--muted:#6c5a4d;--paper:#fffcf6;--surface:#f1e9dd;
+ --blue:#91452c;--blue-hover:#71331f;--petrol:#91452c;--blue-light:#f4e2d3;
+ --line:#d8c8b7;--green:#594331;--green-bg:#eee1cf;--silver:#e8dfd3;
+ background:var(--paper);border-radius:2px;padding:36px}
+[data-lab=shopfront] .shop-brand{padding-block:6px 20px;border-bottom:1px solid var(--line)}
+[data-lab=shopfront] .shop-brand h3{font-family:Georgia,serif;font-size:42px;font-weight:400;letter-spacing:-.035em}
+[data-lab=shopfront] .shop-brand p{font-size:14px}
+[data-lab=shopfront] .shop-layout{grid-template-columns:minmax(0,1fr) 300px;gap:36px}
+[data-lab=shopfront] .product-art{border-radius:0;aspect-ratio:1.15;background:#eadac5}
+[data-lab=shopfront] .product-art.cup{background:#dce2d3}
+[data-lab=shopfront] .product-art.bag{background:#ead5c5}
+[data-lab=shopfront] .product-art.cable{background:#e3dfd7}
+[data-lab=shopfront] .product-art.box{background:#e4dcbf}
+[data-lab=shopfront] .product-art svg{width:72px;height:72px;color:#684c35;stroke-width:1.1}
+[data-lab=shopfront] .product-card>small{font-size:12px}
+[data-lab=shopfront] .product-card>h3{font-size:18px}
+[data-lab=shopfront] .product-card>.lab-button{border-radius:0;border-width:0 0 1px;padding-inline:0;justify-content:space-between;font-size:13px}
+[data-lab=shopfront] .product-card>.lab-button::after{content:'+';font-size:21px;font-weight:400}
+[data-lab=shopfront] .basket{border-radius:0;padding:24px;background:#f1e9dd}
+[data-lab=shopfront] .basket h3{font-family:Georgia,serif;font-size:27px;font-weight:400}
+[data-lab=shopfront] .basket-row{font-size:14px}
+[data-lab=shopfront] .basket-row small{font-size:12px}
+[data-lab=shopfront] .basket-total{font-size:15px}
+[data-lab=shopfront] .lab-button,[data-lab=shopfront] input,[data-lab=shopfront] select{border-radius:0}
+
+/* Frontdesk — an approachable blue conversation space with a separate review rail. */
+[data-lab=frontdesk] .lab-demo-section{background:#e9eef8}
+[data-lab=frontdesk] .lab-shell{
+ --ink:#182d50;--muted:#52627b;--paper:#fff;--surface:#f0f4fc;
+ --blue:#2553ad;--petrol:#21499b;--blue-light:#e2eaff;--mint:#dfeaff;
+ --line:#cbd7eb;--green:#254f92;--green-bg:#e4edff;
+ background:#fff;border-radius:20px;padding:32px}
+[data-lab=frontdesk] .desk-layout{grid-template-columns:minmax(0,1.65fr) minmax(260px,1fr);gap:32px}
+[data-lab=frontdesk] .desk-chat{border:0;background:#f8faff;border-radius:16px;box-shadow:0 12px 35px #1c397913}
+[data-lab=frontdesk] .desk-header{padding:25px 28px;background:var(--petrol)}
+[data-lab=frontdesk] .desk-header>div>span{color:#dae5ff;font-size:13px}
+[data-lab=frontdesk] .desk-messages{height:390px;padding:28px}
+[data-lab=frontdesk] .desk-bubble{background:#eaf0fb;max-width:88%;border-radius:3px 16px 16px 16px;padding:17px 20px}
+[data-lab=frontdesk] .desk-bubble.user{background:#21499b;color:#fff;margin-left:auto;border-radius:16px 3px 16px 16px}
+[data-lab=frontdesk] .desk-bubble.user p,[data-lab=frontdesk] .desk-bubble.user small{color:#fff}
+[data-lab=frontdesk] .desk-bubble>small{font-size:12px}
+[data-lab=frontdesk] .desk-bubble>p{font-size:16px}
+[data-lab=frontdesk] .desk-suggestions button{border-radius:20px;font-size:13px;background:#fff}
+[data-lab=frontdesk] .desk-layout>.lab-panel{background:transparent;border-radius:0;padding:12px 0}
+[data-lab=frontdesk] .lab-checklist{font-size:15px}
+[data-lab=frontdesk] #desk-form{background:#fff;padding:20px}
+
+/* Flowboard — a violet operations workbench; input on the left, connected steps on the right. */
+[data-lab=flowboard] .lab-demo-section{background:#efedf5}
+[data-lab=flowboard] .lab-shell{
+ --ink:#302b44;--muted:#625c75;--paper:#fff;--surface:#f4f2f8;
+ --blue:#604099;--petrol:#604099;--blue-light:#eae3f5;
+ --line:#d7d0e3;--green:#4d357d;--green-bg:#eee7f8;
+ background:#faf9fd;border-radius:12px;padding:32px}
+[data-lab=flowboard] .workflow-layout{grid-template-columns:minmax(280px,.85fr) minmax(0,1.15fr);gap:36px}
+[data-lab=flowboard] .workflow-layout>.lab-panel:first-child{background:#fff;border-radius:0;padding:25px}
+[data-lab=flowboard] .workflow-preview{border:0;border-radius:0;background:transparent;padding:25px 0}
+[data-lab=flowboard] .workflow-steps{list-style-position:inside;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+[data-lab=flowboard] .workflow-steps li{padding:16px 0;font-size:14px;border-color:var(--line)}
+[data-lab=flowboard] .workflow-steps li::marker{color:var(--blue);font-weight:700}
+[data-lab=flowboard] .task-preview{border-radius:0;background:var(--blue-light);padding:20px}
+[data-lab=flowboard] .task-preview strong{font-size:16px}
+[data-lab=flowboard] .task-preview span{font-size:13px}
+[data-lab=flowboard] textarea[readonly]{background:#fff}
+
+/* Stockroom — an ink-blue ledger with clear numbers and a quiet striped table. */
+[data-lab=stockroom] .lab-demo-section{background:#dfe7ed}
+[data-lab=stockroom] .lab-shell{
+ --ink:#182d40;--muted:#516476;--paper:#fff;--surface:#f1f5f8;
+ --blue:#175a7a;--petrol:#193d57;--blue-light:#dcecf2;
+ --line:#c9d6e0;--green:#225a45;--green-bg:#e1f0e7;
+ background:#fff;border-radius:6px;padding:32px}
+[data-lab=stockroom] .lab-shell-heading{border-bottom:2px solid var(--petrol)}
+[data-lab=stockroom] .stock-metrics{background:var(--petrol);color:#fff;padding:25px 30px;margin-bottom:28px;gap:30px}
+[data-lab=stockroom] .stock-metrics>div+div{border-left:1px solid #6b889d;padding-left:30px}
+[data-lab=stockroom] .stock-metrics span{color:#dce6ef;font-size:14px}
+[data-lab=stockroom] .stock-metrics strong{font-size:34px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+[data-lab=stockroom] .table-scroll{border-radius:0}
+[data-lab=stockroom] .lab-stock-table{font-size:15px;font-variant-numeric:tabular-nums}
+[data-lab=stockroom] .lab-stock-table thead{font-size:13px;background:#e6eef4;color:var(--ink)}
+[data-lab=stockroom] .lab-stock-table tbody tr:nth-child(even){background:#f6f9fb}
+[data-lab=stockroom] .lab-stock-table small{font-size:12px}
+[data-lab=stockroom] .stock-tools{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px}
+[data-lab=stockroom] .stock-tools>.lab-panel{border-radius:0;background:transparent;padding:15px 0}
+[data-lab=stockroom] .movement-list li{font-size:15px}
+[data-lab=stockroom] .movement-list span{font-size:13px}
+[data-lab=stockroom] .add-product{padding:20px 24px;border-radius:0}
+
+/* Campaign Kit — a golden editorial planning desk with a poster-like creative preview. */
+[data-lab=campaign-kit] .lab-demo-section{background:#f1e7c9}
+[data-lab=campaign-kit] .lab-shell{
+ --ink:#342e20;--muted:#6a5e43;--paper:#fffcf3;--surface:#f2ecd9;
+ --blue:#705118;--petrol:#342e20;--blue-light:#f4e4ac;
+ --line:#d4c6a4;--green:#574415;--green-bg:#f7e8b1;
+ background:var(--paper);border-radius:0;padding:36px}
+[data-lab=campaign-kit] .lab-shell-heading h2{font-size:34px;letter-spacing:-.04em}
+[data-lab=campaign-kit] .campaign-layout{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px}
+[data-lab=campaign-kit] .campaign-layout>.lab-panel{padding:12px 0;background:transparent;border-radius:0}
+[data-lab=campaign-kit] .campaign-preview{border-radius:0;background:#f2d16e;padding:36px;min-height:340px}
+[data-lab=campaign-kit] .campaign-preview h4{font-family:Georgia,serif;font-size:43px;font-weight:400;line-height:1.15;max-width:18ch;letter-spacing:-.035em;overflow-wrap:anywhere}
+[data-lab=campaign-kit] .campaign-preview>strong{font-size:16px;border-bottom:1px solid #a78b45;padding-bottom:14px;margin-bottom:25px}
+[data-lab=campaign-kit] .campaign-preview p{color:#534322;font-size:16px;max-width:46ch}
+[data-lab=campaign-kit] .campaign-cta{border-radius:0;font-size:13px}
+[data-lab=campaign-kit] .campaign-preview .demo-badge{background:#342e20;color:#fff9e9}
+[data-lab=campaign-kit] textarea[readonly]{background:#fffdf7}
+
+@media(max-width:1050px){
+ [data-lab=shopfront] .shop-layout{grid-template-columns:minmax(0,1fr) 280px;gap:24px}
+ [data-lab=campaign-kit] .campaign-layout{gap:28px}
+ [data-lab=frontdesk] .desk-layout{gap:24px;grid-template-columns:minmax(0,1.3fr) minmax(240px,1fr)}
+}
+@media(max-width:760px){
+ .page-lab .lab-shell{padding:24px 20px}
+ [data-lab=shopfront] .shop-layout,[data-lab=frontdesk] .desk-layout,
+ [data-lab=flowboard] .workflow-layout,[data-lab=stockroom] .stock-tools,
+ [data-lab=campaign-kit] .campaign-layout{grid-template-columns:1fr;gap:28px}
+ [data-lab=shopfront] .shop-brand h3{font-size:34px}
+ [data-lab=frontdesk] .desk-messages{height:350px;padding:18px}
+ [data-lab=stockroom] .stock-metrics{padding:22px 20px;gap:20px}
+ [data-lab=stockroom] .stock-metrics>div+div{padding-left:18px}
+ [data-lab=stockroom] .stock-metrics strong{font-size:29px}
+ [data-lab=campaign-kit] .campaign-preview{padding:28px}
+}
+@media(max-width:480px){
+ .page-lab .lab-shell{padding:22px 16px}
+ .page-lab .lab-shell-heading p{font-size:13px}
+ [data-lab=shopfront] .shop-brand{flex-direction:column;gap:12px}
+ [data-lab=shopfront] .product-art svg{width:58px;height:58px}
+ [data-lab=shopfront] .basket{padding:20px 16px}
+ [data-lab=frontdesk] .desk-header{padding:20px}
+ [data-lab=frontdesk] .desk-bubble{padding:14px;max-width:94%}
+ [data-lab=frontdesk] .desk-bubble>p{font-size:15px}
+ [data-lab=flowboard] .workflow-layout>.lab-panel:first-child{padding:20px 16px}
+ [data-lab=flowboard] .workflow-steps{grid-template-columns:1fr}
+ [data-lab=stockroom] .stock-metrics{grid-template-columns:1fr;padding:20px;gap:18px}
+ [data-lab=stockroom] .stock-metrics>div+div{border-left:0;border-top:1px solid #6b889d;padding:16px 0 0}
+ [data-lab=stockroom] .stock-metrics>div:last-child{grid-column:auto}
+ [data-lab=campaign-kit] .campaign-preview{padding:24px 20px}
+ [data-lab=campaign-kit] .campaign-preview h4{font-size:34px}
+}
