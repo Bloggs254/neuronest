@@ -37,3 +37,8 @@ The guide is deterministic copy and form-prefill logic, not an AI service. There
 The capability explorer owns one selected-service state. A user-selected button updates the visible details, pressed state, status announcement, service-page link and enquiry action together. No autoplay, remote requests or visitor storage. Without JavaScript, direct links expose all five service pages.
 
 Service detail pages link to the homepage with one public service slug. Only the five known slugs may preselect a service. No name, email or project message is transferred in a URL. Standalone pages have their own local navigation controller; the homepage retains its tested navigation and guide controllers.
+
+
+## Artwork presentation
+
+art-motion.js owns only the hero image transforms. Eligible means desktop width, fine mouse pointer, hover support and no reduced-motion preference. A single entrance leads to pointer-ready state; leaving, scrolling, blur or hiding the tab settles the image. Media changes dispose listeners, queued frames, observer and tweens and restore the original inline style. CSS independently enforces stillness for mobile, touch and reduced motion. This layer never owns guide, enquiry or navigation state.

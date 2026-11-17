@@ -8,7 +8,8 @@ Responsive, buildless technology-studio website with a homepage, five service pa
 - Guided service finder that gathers business/location, challenge and timeline, then transfers a draft into the inquiry form. This is explicitly labeled as a guided experience, not live AI.
 - No client inquiry is stored or sent automatically. Manrope and Space Grotesk fonts are served locally, with their SIL Open Font Licenses in `dist/fonts/`.
 - The local capability explorer updates service details and a link to the relevant service page. Service pages return to the enquiry form with an allowlisted public service slug; no customer details are placed in URLs.
-- A short, one-time hero entrance uses the locally served GSAP 3.15.0 bundle. The rest of the page remains still. Content and actions remain usable without GSAP, and reduced-motion settings are respected. The guide's optional 170ms open/close transition reverses safely on rapid toggles.
+- The hero artwork has a one-time desktop entrance and a cursor-responsive tilt capped at 3 degrees. Mobile, coarse-touch and reduced-motion visitors see a still image. Motion resets on pointer leave, scroll, blur or a hidden tab; no animation loop runs while idle.
+- A short, one-time hero text entrance uses the locally served GSAP 3.15.0 bundle. The rest of the page remains still. Content and actions remain usable without GSAP, and reduced-motion settings are respected. The guide's optional 170ms open/close transition reverses safely on rapid toggles.
 
 ## Interaction model
 See [STATE-MODEL.md](STATE-MODEL.md) for the user-interface state inventory, transition rules, accessibility behavior, and integration boundaries. Keep that document aligned with `dist/app.js` when interaction flows change.
