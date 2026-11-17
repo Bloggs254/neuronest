@@ -152,7 +152,7 @@ nav .nav-cta:hover {
   padding-block:24px 8px;
   align-self:center}
 .hero h1 {
-  font-size:clamp(58px,6.5vw,90px);
+  font-size:clamp(46px,5.15vw,72px);
   line-height:1.01;
   letter-spacing:-.04em}
 .hero-description {
@@ -949,7 +949,7 @@ dialog a {
   .hero {
   gap:30px}
 .hero h1 {
-  font-size:70px}
+  font-size:60px}
 .hero-description {
   font-size:16px}
 .connection-lab {
@@ -991,7 +991,7 @@ nav {
   .hero {
   gap:25px}
 .hero h1 {
-  font-size:60px}
+  font-size:50px}
 .hero .button {
   font-size:13px;
   padding-inline:17px}
@@ -1074,10 +1074,9 @@ nav .nav-cta {
 .hero-copy {
   padding-top:5px}
 .hero h1 {
-  font-size:clamp(55px,10vw,78px);
+  font-size:clamp(45px,8vw,62px);
   line-height:1.03}
-.hero h1 br:nth-child(2) {
-  display:none}
+
 .hero-description {
   font-size:17px;
   margin-top:23px;
@@ -1243,9 +1242,8 @@ input,select,textarea {
 
 @media(max-width:480px) {
   .hero h1 {
-  font-size:clamp(49px,12vw,60px)}
-.hero h1 br:nth-child(2) {
-  display:initial}
+  font-size:clamp(39px,10.2vw,48px)}
+
 .hero-description {
   font-size:16px}
 .hero-actions {

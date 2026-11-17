@@ -13,3 +13,5 @@ Composition: left-aligned oversized hero headline beside a blue interactive work
 Interactions: workflow examples are user-selected pressed buttons; no autoplay. The existing inquiry, mobile navigation, privacy and guide states remain intact. One optional GSAP hero entrance; stable reduced-motion states and no content hidden by default. Mobile is a composed single column rather than a miniature desktop layout.
 
 Source of truth: dist/. Run scripts/sync-public.mjs after changing public files. No cloud image tools, native skill engines or hooks are required.
+
+Messaging refinement: the hero explicitly names websites, AI and business systems. The supporting sentence names online stores, AI assistants, repetitive-task automation and operational systems. Use service names before abstract brand language. Keep the blue workflow illustration and existing visual identity.
