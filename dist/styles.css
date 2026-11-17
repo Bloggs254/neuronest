@@ -2173,3 +2173,20 @@ summary {
  .project-narrative h2 br{display:none}
  .project-narrative p{font-size:16px}
 }
+
+/* Keep the service names visible beneath familiar business questions. */
+.capability-controls button>span{display:block;min-width:0}
+.capability-controls button strong{display:block;font:500 20px/1.35 var(--display);letter-spacing:-.02em}
+.capability-controls button small{display:block;font:500 14px/1.5 var(--body);letter-spacing:0;margin-top:7px}
+.capability-controls button svg{flex-shrink:0}
+@media(max-width:760px){
+ .capability-controls button strong{font-size:17px}
+ .capability-controls button small{font-size:14px}
+ .capability-controls button{min-height:100px}
+}
+@media(max-width:560px){
+ .capability-controls{grid-template-columns:1fr}
+ .capability-controls button{min-height:80px;padding-block:16px}
+ .capability-controls button strong{font-size:19px}
+ .capability-controls button small{margin-top:4px}
+}
