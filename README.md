@@ -19,7 +19,7 @@ Responsive, buildless technology-studio website with a homepage, five service pa
 - Stockroom: browser inventory edition 1.0 with optional locally saved records, dated movements, product editing, JSON backup/restore and CSV exports.
 - Campaign Kit: template-based campaign brief, tracking URL and text export.
 
-All start with sample data. Stockroom additionally offers an explicitly selected My saved records workspace stored only in that browser; other demos reset on reload. Nothing is purchased, sent or published automatically. For production, backend services, real accounts, privacy and operations must be scoped separately. These are original studio demos rather than customer case studies. They are intentionally kept separate from the main presentation: the homepage shows two compact concept previews, and service pages have no demo blocks.
+All start with sample data. Stockroom additionally offers an explicitly selected My saved records workspace stored only in that browser; other demos reset on reload. Nothing is purchased, sent or published automatically. For production, backend services, real accounts, privacy and operations must be scoped separately. These are original studio demos rather than customer case studies. They are intentionally kept separate from the main presentation: the homepage shows two compact previews: the OpenDuka project and a storefront concept, and service pages have no demo blocks.
 
 ## Interaction model
 See [STATE-MODEL.md](STATE-MODEL.md) for the user-interface state inventory, transition rules, accessibility behavior, and integration boundaries. Keep that document aligned with `dist/app.js` when interaction flows change.
@@ -51,3 +51,7 @@ The saved workspace supports up to 1,000 products and 10,000 movements within a 
 ## Owner actions and feedback
 
 See OWNER-SETUP.md for GitHub protection and analytics steps that still require the owner. No GitHub authentication settings, branch rules or analytics account have been configured. The optional homepage footer feedback form prepares a reviewable email draft without storing or sending answers. research/website-feedback.md and the empty CSV templates provide a first review round and weekly measurement process; no participant results have been fabricated.
+
+## OpenDuka showcase
+
+`work/openduka.html` describes the working OpenDuka project without exposing its private repository, access credentials or database. Published screenshots were captured from a fresh fictional local demo, not an existing customer workspace. The project is presented as active work with deployment boundaries, not a finished client case study.

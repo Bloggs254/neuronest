@@ -4,7 +4,7 @@ NeuroNest is a static public website with a single-browser inventory tool, not a
 
 ## Browser protections
 
-All 14 pages declare a Content Security Policy immediately after the character encoding. Scripts, fonts and images load from the same origin. Inline scripts, string evaluation, inline event handlers, fetch/WebSocket connections, native form submissions, embedded frames, plugins and workers are blocked. Normal links, reviewed WhatsApp/email drafts and locally generated text downloads still work.
+All 15 pages declare a Content Security Policy immediately after the character encoding. Scripts, fonts and images load from the same origin. Inline scripts, string evaluation, inline event handlers, fetch/WebSocket connections, native form submissions, embedded frames, plugins and workers are blocked. Normal links, reviewed WhatsApp/email drafts and locally generated text downloads still work.
 
 Inline CSS remains permitted because GSAP updates element styles, and the static previews and no-JavaScript fallbacks use inline styles. This is a deliberate compatibility allowance, not permission for inline JavaScript. Referrer metadata is suppressed on outgoing requests. First-party UI code uses text nodes and SVG DOM methods rather than HTML-string insertion.
 

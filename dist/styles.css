@@ -13,32 +13,35 @@
   src:url('fonts/spacegrotesk.ttf') format('truetype')}
 
 :root {
-  --ink:#112f32;
-  --blue:#154f50;
-  --blue-hover:#0b3b3e;
-  --blue-light:#e2efec;
-  --paper:#fbfcfa;
-  --surface:#edf2ef;
-  --muted:#526669;
-  --line:#d3dfdb;
-  --on-blue:#f6faf6;
-  --on-blue-muted:#cadbd5;
-  --blue-line:#648784;
-  --amber:#83580f;
-  --amber-bg:#f8ecd3;
-  --green:#245c47;
-  --green-bg:#e6f0e9;
-  --focus:#b56a13;
-  --shadow:0 20px 55px rgba(8,47,51,.13);
-  --backdrop:rgba(8,47,51,.65);
-  --petrol:#082f33;
-  --mint:#d8eee3;
-  --silver:#edf2f0;
+  --ink:#25231f;
+  --blue:#9b3e2b;
+  --blue-hover:#7c3022;
+  --blue-light:#eee7dc;
+  --paper:#f6f1e8;
+  --surface:#efe8dc;
+  --muted:#625b50;
+  --line:#d8cdbd;
+  --on-blue:#fff8ed;
+  --on-blue-muted:#d4cabc;
+  --blue-line:#776d60;
+  --amber:#7c4e00;
+  --amber-bg:#f9e6bd;
+  --green:#355542;
+  --green-bg:#e5ebdd;
+  --focus:#c05a38;
+  --shadow:0 20px 55px rgba(37,35,31,.13);
+  --backdrop:rgba(37,35,31,.65);
+  --petrol:#242320;
+  --mint:#e9ddca;
+  --silver:#e8e1d5;
   --body:Manrope,sans-serif;
   --display:'Space Grotesk',sans-serif;
   --radius:14px;
   --gutter:clamp(22px,5.5vw,88px);
-  --measure:1280px}
+  --measure:1280px;
+  --accent:#ad422b;
+  --accent-hover:#8c3220;
+  --on-accent:#fff8ed}
 
 * {
   box-sizing:border-box}
@@ -2202,3 +2205,11 @@ summary {
 .site-feedback .feedback-note{margin-top:16px}
 .site-feedback #feedback-error{color:#ffdfad}
 .site-feedback #feedback-result{margin-top:25px}
+
+/* Warm studio palette: orange signals an action, not a decorative wash. */
+.button.pearl{background:var(--accent);color:var(--on-accent)}
+.button.pearl:hover{background:var(--accent-hover)}
+.hero-art img,.detail-art img{filter:saturate(.12)}
+.selected-work-grid h3 a:focus-visible{outline:3px solid var(--focus);outline-offset:5px}
+
+.project-form input,.project-form select,.project-form textarea,.site-feedback textarea,.site-feedback select,.assistant input{border-color:#8b7c6b}

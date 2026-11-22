@@ -5,3 +5,6 @@
 *.pem
 *.key
 node_modules/
+
+# Isolated, fictional showcase capture workspaces.
+/.openai/openduka-*
