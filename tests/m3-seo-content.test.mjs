@@ -37,7 +37,7 @@ test('guide index is public while placeholder guides remain noindex and outside 
 });
 
 test('robots and sitemap are generated from the configured URL and real indexable routes',()=>{
-  const robots=read('robots.txt');const sitemap=read('sitemap.xml');assert.equal(robots,`User-agent: *\nAllow: /\n\nSitemap: ${config.siteUrl}sitemap.xml\n`);assert.equal([...sitemap.matchAll(/<url>/g)].length,17);assert.doesNotMatch(sitemap,/404\.html/);for(const match of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g))assert.ok(match[1].startsWith(config.siteUrl));
+  const robots=read('robots.txt').replaceAll('\r\n','\n');const sitemap=read('sitemap.xml');assert.equal(robots,`User-agent: *\nAllow: /\n\nSitemap: ${config.siteUrl}sitemap.xml\n`);assert.equal([...sitemap.matchAll(/<url>/g)].length,17);assert.doesNotMatch(sitemap,/404\.html/);for(const match of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g))assert.ok(match[1].startsWith(config.siteUrl));
 });
 
 test('JSON-LD is valid and contains only approved Organization and Service facts',()=>{

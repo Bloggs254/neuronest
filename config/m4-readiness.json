@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "baseCommit": "f276f1aaf50fe85053f3b86b109a7d18460a34b4",
+  "localFoundationAuthorized": true,
+  "liveActivationAuthorized": false,
+  "gates": {
+    "productionDomainVerified": false,
+    "dnsControlVerified": false,
+    "providerCheckoutApproved": false,
+    "monthlyCostWithinCapVerified": false,
+    "encryptedOffsiteBackupApproved": false,
+    "retentionPolicyApproved": false,
+    "privacyWordingApproved": false,
+    "notificationEmailVerified": false,
+    "securityContactVerified": false,
+    "inquiryDeliveryTestApproved": false,
+    "analyticsProviderApproved": false,
+    "searchConsoleTokenVerified": false,
+    "liveWorkWindowApproved": false
+  },
+  "features": {
+    "deployment": false,
+    "inquiries": false,
+    "analytics": false,
+    "searchConsole": false,
+    "contactPublication": false,
+    "openDukaProduction": false
+  }
+}

@@ -2,9 +2,9 @@
 
 Date: 28 November 2026
 
-Branch: `m4-vps-openduka-foundations`
+Branch: `milestone4-v2`
 
-Base / rollback checkpoint: `c8cd6a6`
+Base / rollback checkpoint: `f276f1aaf50fe85053f3b86b109a7d18460a34b4`
 
 ## Outcome
 
@@ -20,10 +20,13 @@ The locally possible Milestone 4 foundations are prepared and tested. No provide
 - Four versioned, visibly unapproved data-protection drafts: inquiry notice, retention, access/erasure and processor/transfer assessment.
 - Hosting/backup/TLS research and an explicit unverified-cost gate.
 - Corrected `SECURITY.md` so it no longer advertises an unverified Gmail reporting channel.
+- Machine-readable readiness gates that keep deployment, inquiries, analytics, Search Console, contact publication and OpenDuka production disabled.
+- An owner checklist that maps every external dependency to a recorded approval or verification step.
 
 ## Tests
 
-- Full automated suite: 76/76 passed.
+- Accepted M3 baseline: 84/84 automated tests passed before M4-v2 changes.
+- Full automated suite after M4-v2 readiness controls: 87/87 passed.
 - New M4 tests: fail-closed configuration, four draft gates, successful synthetic SQLite restore, corrupt/checksum refusal and non-empty overwrite refusal.
 - All 72 prior M1–M3 tests remain passing.
 - The public website output is unchanged apart from reproducible line-ending restoration; no new visual/browser regression was introduced.
@@ -56,4 +59,4 @@ The brief's provisional USD 12 instance plus Vultr's documented 20% backup surch
 
 ## Rollback
 
-Nothing was deployed. Checkpoint `c8cd6a6` is the accepted pre-M4 state. After the M4 commit is recorded, use `git revert <M4-checkpoint>` on this branch for a non-destructive rollback.
+Nothing was deployed. Checkpoint `f276f1aaf50fe85053f3b86b109a7d18460a34b4` is the accepted pre-M4 state. After the M4-v2 commit is recorded, use `git revert <M4-v2-checkpoint>` on this branch for a non-destructive rollback.
