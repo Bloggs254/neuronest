@@ -55,8 +55,8 @@ test('every page restricts scripts, connections and native form submission befor
 });
 
 test('public package excludes private files, unexpected data dumps and obvious credential formats', () => {
-  const dataFiles = new Set(['assets/artwork.json', 'fonts/provenance.json', 'vendor/gsap-provenance.json']);
-  const allowed = new Set(['.html', '.css', '.js', '.svg', '.webp', '.ttf', '.txt']);
+  const dataFiles = new Set(['assets/artwork.json', 'fonts/provenance.json', 'vendor/gsap-provenance.json', 'assets/brand/site.webmanifest']);
+  const allowed = new Set(['.html', '.css', '.js', '.svg', '.webp', '.ttf', '.woff2', '.png', '.ico', '.txt', '.xml']);
   const secretPatterns = [
     /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/,
     /\bgh[pousr]_[A-Za-z0-9]{30,}\b/,
@@ -68,7 +68,7 @@ test('public package excludes private files, unexpected data dumps and obvious c
     const name = relative(publicRoot, file).replaceAll('\\', '/');
     assert.ok(!name.split('/').some(part => part.startsWith('.')), `Hidden public file: ${name}`);
     assert.ok(allowed.has(extname(file)) || dataFiles.has(name), `Unexpected public file: ${name}`);
-    if (['.ttf', '.webp'].includes(extname(file))) continue;
+    if (['.ttf', '.woff2', '.webp', '.png', '.ico'].includes(extname(file))) continue;
     const content = readFileSync(file, 'utf8');
     for (const pattern of secretPatterns) assert.ok(!pattern.test(content), `Possible credential in ${name}; inspect privately`);
   }

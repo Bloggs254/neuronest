@@ -4,10 +4,11 @@ import vm from 'node:vm';
 
 // Narrow DOM adapter for exercising event-driven app behavior in Node. It is
 // deliberately not a layout/browser substitute; viewport and visual QA remain
-// separate. Element IDs are taken from the real HTML to catch missing wiring.
+// separate. The preserved baseline HTML exercises the retired legacy app.js
+// modules. M1's new homepage runtime is verified by its own real-browser suite.
 export function createApp({ reducedMotion = false, clipboardWrite = async () => {}, motion, loadMotion = false, gsap } = {}) {
   const root = resolve(import.meta.dirname, '..');
-  const html = readFileSync(resolve(root, 'dist/index.html'), 'utf8');
+  const html = readFileSync(resolve(root, 'tests/fixtures/legacy-home.html'), 'utf8');
   const source = readFileSync(resolve(root, 'dist/app.js'), 'utf8');
   const document = { activeElement: null };
 

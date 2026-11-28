@@ -14,7 +14,7 @@ function pagesIn(directory) {
 
 test('every standalone page has a resolvable local navigation and asset path', () => {
   const pages = pagesIn(root);
-  assert.equal(pages.length, 15);
+  assert.equal(pages.length, 16);
   for (const page of pages) {
     const html = readFileSync(page, 'utf8');
     for (const match of html.matchAll(/\b(?:href|src|srcset)="([^"]+)"/g)) {

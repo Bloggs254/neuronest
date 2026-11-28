@@ -8,3 +8,5 @@ node_modules/
 
 # Isolated, fictional showcase capture workspaces.
 /.openai/openduka-*
+.m2-local/
+docs/m2-evidence/local-data/
