@@ -55,6 +55,7 @@ test('N geometry and supplied CSS-only motion sequence respect the brand and fal
   for(const name of ['draw','pop','drop','jolt','travel','hop','hdr-shrink','leave','catch'])assert.match(css,new RegExp(`@keyframes ${name}\\{`));
   assert.match(css, /@supports \(animation-timeline:view\(\)\)/);
   assert.match(css, /\.pkt\{display:none\}/);
+  assert.match(css, /\.pkt\{opacity:0;animation:travel 4s linear 2\.6s infinite;animation-fill-mode:backwards\}/);
   assert.match(css, /\.hero-n:hover\{transform:scale\(1\.08\) rotate\(-6deg\)\}/);
   assert.doesNotMatch(css, /url\([^)]*(?:gsap|animation)/i);
 });

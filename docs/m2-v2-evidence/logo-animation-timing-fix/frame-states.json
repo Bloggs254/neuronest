@@ -1,0 +1,329 @@
+{
+  "capturedAt": "2026-11-28T12:07:08.392Z",
+  "frames": [
+    {
+      "label": "01-0.3s-draw",
+      "atMs": 300,
+      "values": {
+        ".n-draw": {
+          "opacity": 1,
+          "transform": "none",
+          "strokeDashoffset": "0.789609px",
+          "animationName": "draw",
+          "animationDelay": "0.2s",
+          "animationFillMode": "both"
+        },
+        ".nd1": {
+          "opacity": 0.399532,
+          "transform": "matrix(0.847264, 0, 0, 0.847264, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "0.2s",
+          "animationFillMode": "both"
+        },
+        ".nd2": {
+          "opacity": 0,
+          "transform": "matrix(0.4, 0, 0, 0.4, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "0.6s",
+          "animationFillMode": "both"
+        },
+        ".nd3": {
+          "opacity": 0,
+          "transform": "matrix(0.4, 0, 0, 0.4, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "1s",
+          "animationFillMode": "both"
+        },
+        ".node": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, -200)",
+          "strokeDashoffset": "0px",
+          "animationName": "drop, hop",
+          "animationDelay": "1.2s, 2.6s",
+          "animationFillMode": "both, none"
+        },
+        ".pkt": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "travel",
+          "animationDelay": "2.6s",
+          "animationFillMode": "backwards"
+        }
+      }
+    },
+    {
+      "label": "02-0.8s-node-pop",
+      "atMs": 800,
+      "values": {
+        ".n-draw": {
+          "opacity": 1,
+          "transform": "none",
+          "strokeDashoffset": "0.212727px",
+          "animationName": "draw",
+          "animationDelay": "0.2s",
+          "animationFillMode": "both"
+        },
+        ".nd1": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "0.2s",
+          "animationFillMode": "both"
+        },
+        ".nd2": {
+          "opacity": 0.576364,
+          "transform": "matrix(1.01207, 0, 0, 1.01207, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "0.6s",
+          "animationFillMode": "both"
+        },
+        ".nd3": {
+          "opacity": 0,
+          "transform": "matrix(0.4, 0, 0, 0.4, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "1s",
+          "animationFillMode": "both"
+        },
+        ".node": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, -200)",
+          "strokeDashoffset": "0px",
+          "animationName": "drop, hop",
+          "animationDelay": "1.2s, 2.6s",
+          "animationFillMode": "both, none"
+        },
+        ".pkt": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "travel",
+          "animationDelay": "2.6s",
+          "animationFillMode": "backwards"
+        }
+      }
+    },
+    {
+      "label": "03-1.3s-ball-drop",
+      "atMs": 1300,
+      "values": {
+        ".n-draw": {
+          "opacity": 1,
+          "transform": "none",
+          "strokeDashoffset": "0px",
+          "animationName": "draw",
+          "animationDelay": "0.2s",
+          "animationFillMode": "both"
+        },
+        ".nd1": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "0.2s",
+          "animationFillMode": "both"
+        },
+        ".nd2": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "0.6s",
+          "animationFillMode": "both"
+        },
+        ".nd3": {
+          "opacity": 0.794087,
+          "transform": "matrix(1.11515, 0, 0, 1.11515, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "1s",
+          "animationFillMode": "both"
+        },
+        ".node": {
+          "opacity": 0.723141,
+          "transform": "matrix(1, 0, 0, 1, 0, -195.138)",
+          "strokeDashoffset": "0px",
+          "animationName": "drop, hop",
+          "animationDelay": "1.2s, 2.6s",
+          "animationFillMode": "both, none"
+        },
+        ".pkt": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "travel",
+          "animationDelay": "2.6s",
+          "animationFillMode": "backwards"
+        }
+      }
+    },
+    {
+      "label": "04-1.8s-ball-bounce",
+      "atMs": 1800,
+      "values": {
+        ".n-draw": {
+          "opacity": 1,
+          "transform": "none",
+          "strokeDashoffset": "0px",
+          "animationName": "draw",
+          "animationDelay": "0.2s",
+          "animationFillMode": "both"
+        },
+        ".nd1": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "0.2s",
+          "animationFillMode": "both"
+        },
+        ".nd2": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "0.6s",
+          "animationFillMode": "both"
+        },
+        ".nd3": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "1s",
+          "animationFillMode": "both"
+        },
+        ".node": {
+          "opacity": 1,
+          "transform": "matrix(1.05043, 0, 0, 0.949572, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "drop, hop",
+          "animationDelay": "1.2s, 2.6s",
+          "animationFillMode": "both, none"
+        },
+        ".pkt": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "travel",
+          "animationDelay": "2.6s",
+          "animationFillMode": "backwards"
+        }
+      }
+    },
+    {
+      "label": "05-2.8s-hop-with-dot",
+      "atMs": 2800,
+      "values": {
+        ".n-draw": {
+          "opacity": 1,
+          "transform": "none",
+          "strokeDashoffset": "0px",
+          "animationName": "draw",
+          "animationDelay": "0.2s",
+          "animationFillMode": "both"
+        },
+        ".nd1": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "0.2s",
+          "animationFillMode": "both"
+        },
+        ".nd2": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "0.6s",
+          "animationFillMode": "both"
+        },
+        ".nd3": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "1s",
+          "animationFillMode": "both"
+        },
+        ".node": {
+          "opacity": 1,
+          "transform": "matrix(1.01774, 0, 0, 1.00342, 0, -11.2876)",
+          "strokeDashoffset": "0px",
+          "animationName": "drop, hop",
+          "animationDelay": "1.2s, 2.6s",
+          "animationFillMode": "both, none"
+        },
+        ".pkt": {
+          "opacity": 0.699772,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "travel",
+          "animationDelay": "2.6s",
+          "animationFillMode": "backwards"
+        }
+      }
+    },
+    {
+      "label": "06-3.4s-hop-with-dot",
+      "atMs": 3400,
+      "values": {
+        ".n-draw": {
+          "opacity": 1,
+          "transform": "none",
+          "strokeDashoffset": "0px",
+          "animationName": "draw",
+          "animationDelay": "0.2s",
+          "animationFillMode": "both"
+        },
+        ".nd1": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "0.2s",
+          "animationFillMode": "both"
+        },
+        ".nd2": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "0.6s",
+          "animationFillMode": "both"
+        },
+        ".nd3": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "pop",
+          "animationDelay": "1s",
+          "animationFillMode": "both"
+        },
+        ".node": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "strokeDashoffset": "0px",
+          "animationName": "drop, hop",
+          "animationDelay": "1.2s, 2.6s",
+          "animationFillMode": "both, none"
+        },
+        ".pkt": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, -5.16151, 94.6234)",
+          "strokeDashoffset": "0px",
+          "animationName": "travel",
+          "animationDelay": "2.6s",
+          "animationFillMode": "backwards"
+        }
+      }
+    }
+  ]
+}

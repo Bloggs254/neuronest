@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-28T11:41:03.813Z",
+  "checkedAt": "2026-11-28T12:08:28.041Z",
   "engine": "chromium",
   "results": [
     {
@@ -511,7 +511,7 @@
       "h1": 1,
       "heroOpacity": "1",
       "nodeOpacity": "1",
-      "pktOpacity": "1",
+      "pktOpacity": "0",
       "overflow": 0
     }
   ],

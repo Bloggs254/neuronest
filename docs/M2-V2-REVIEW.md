@@ -48,7 +48,18 @@ Deployment status: not deployed, pushed or merged
 - Chromium/Edge browser regression: 16 routes at 390, 768 and 1280 px, 48 route/viewport checks, 0 failures.
 - JavaScript-off check at 390 px: passed; the page remains readable and the form remains disabled.
 - Reduced-motion check at 390 px: passed; the media preference is detected and the page remains readable without overflow.
-- CSS-animation-off check at 390 px: passed; the hero, nodes and travelling dot remain visible and still.
+- CSS-animation-off check at 390 px: passed; the complete N and main amber node remain visible and still. The decorative travelling packet stays hidden by design until its animation runs.
+
+## Packet timing correction
+
+The small amber packet now has a base `opacity: 0`, a 2.6-second delay and `animation-fill-mode: backwards`. Computed-style evidence confirms zero packet opacity at 0.3, 0.8, 1.3 and 1.8 seconds, then visible travel after the first hop begins. The capture script also fails if any node or the amber ball appears before its scheduled entrance.
+
+- `docs/m2-v2-evidence/logo-animation-timing-fix/01-0.3s-draw.png`
+- `docs/m2-v2-evidence/logo-animation-timing-fix/02-0.8s-node-pop.png`
+- `docs/m2-v2-evidence/logo-animation-timing-fix/03-1.3s-ball-drop.png`
+- `docs/m2-v2-evidence/logo-animation-timing-fix/04-1.8s-ball-bounce.png`
+- `docs/m2-v2-evidence/logo-animation-timing-fix/05-2.8s-hop-with-dot.png`
+- `docs/m2-v2-evidence/logo-animation-timing-fix/06-3.4s-hop-with-dot.png`
 - Console and page errors: none in the Chromium run.
 - Horizontal overflow: none in the Chromium run.
 - Firefox: the installed Firefox build did not complete the Playwright automation within 90 seconds, so Firefox is not claimed as passed. No site failure was reported before the runner stalled.

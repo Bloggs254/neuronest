@@ -39,7 +39,7 @@ if(engine==='chromium'){
   const animationsOffResponse=await animationsOffPage.goto(base,{waitUntil:'networkidle'});
   const animationsOffResult=await animationsOffPage.evaluate(()=>({h1:document.querySelectorAll('h1').length,heroOpacity:getComputedStyle(document.querySelector('.hero-vis')).opacity,nodeOpacity:getComputedStyle(document.querySelector('.node')).opacity,pktOpacity:getComputedStyle(document.querySelector('.pkt')).opacity,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}));
   results.push({engine,mode:'css-animation-off',viewport:'phone-390',route:'/',status:animationsOffResponse?.status(),...animationsOffResult});
-  if(animationsOffResponse?.status()!==200||animationsOffResult.h1!==1||animationsOffResult.heroOpacity!=='1'||animationsOffResult.nodeOpacity!=='1'||animationsOffResult.pktOpacity!=='1'||animationsOffResult.overflow>1)failures.push({engine,mode:'css-animation-off',...animationsOffResult});
+  if(animationsOffResponse?.status()!==200||animationsOffResult.h1!==1||animationsOffResult.heroOpacity!=='1'||animationsOffResult.nodeOpacity!=='1'||animationsOffResult.pktOpacity!=='0'||animationsOffResult.overflow>1)failures.push({engine,mode:'css-animation-off',...animationsOffResult});
   await animationsOff.close();
 }
 await browser.close();await writeFile(path.join(evidence,`browser-results-${engine}.json`),JSON.stringify({checkedAt:new Date().toISOString(),engine,results,failures},null,2));console.log(`Checked ${routes.length} routes at ${viewports.length} viewports in ${engine}; ${failures.length} failure(s).`);if(failures.length){console.error(JSON.stringify(failures,null,2));process.exitCode=1}

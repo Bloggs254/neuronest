@@ -34,7 +34,7 @@
 .nd1{animation-delay:.2s}.nd2{animation-delay:.6s}.nd3{animation-delay:1s}
 .node{transform-box:fill-box;transform-origin:50% 100%;animation:drop 1.4s linear 1.2s both,hop 4s linear 2.6s infinite}
 .hero-n{transform-origin:50% 90%;animation:jolt .9s ease-out 1.8s}
-.pkt{animation:travel 4s linear 2.6s infinite}
+.pkt{opacity:0;animation:travel 4s linear 2.6s infinite;animation-fill-mode:backwards}
 }
 .logo svg{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
 .logo .amb{transform-box:fill-box;transform-origin:center;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
