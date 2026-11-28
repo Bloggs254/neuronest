@@ -8,6 +8,7 @@
   const compact = matchMedia('(max-width: 960px)');
   const setOpen = (open, returnFocus = false) => {
     nav.classList.toggle('open', open);
+    header.classList.toggle('menu-open', open);
     menu.setAttribute('aria-expanded', String(open));
     if (returnFocus) menu.focus();
   };

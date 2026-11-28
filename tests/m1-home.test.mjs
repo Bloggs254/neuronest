@@ -58,7 +58,19 @@ test('N geometry and supplied CSS-only motion sequence respect the brand and fal
   assert.match(css, /\.pkt\{display:none\}/);
   assert.match(css, /\.pkt\{opacity:0;animation:travel 4s linear 2\.6s infinite;animation-fill-mode:backwards\}/);
   assert.match(css, /\.hero-n:hover\{transform:scale\(1\.08\) rotate\(-6deg\)\}/);
+  assert.match(css, /@keyframes drop-compact\{/);
+  assert.match(css, /\.hero-vis \.node\{animation:drop-compact 1\.25s linear 1\.2s both,hop 4s linear 2\.45s infinite\}/);
   assert.doesNotMatch(css, /url\([^)]*(?:gsap|animation)/i);
+});
+test('mobile navigation is closed on first paint and expands without covering the hero',()=>{
+  const css=read('assets/css/site.css');
+  const js=read('assets/js/site.js');
+  assert.match(css, /\.site-header #nav\{display:none\}/);
+  assert.match(css, /\.site-header #nav\.open\{display:flex\}/);
+  assert.match(css, /\.site-header\.menu-open \.hdr-in\{height:auto;min-height:76px/);
+  assert.match(js, /header\.classList\.toggle\('menu-open', open\)/);
+  assert.match(html, /<noscript><link rel="stylesheet" href="assets\/css\/noscript\.css"><\/noscript>/);
+  assert.match(css, /@media\(max-width:760px\)\{h1,h2\{letter-spacing:-\.035em\}h1\{line-height:1\.08\}/);
 });
 test('licensed WOFF2 files have correct signatures and pinned hashes', () => {
   const expected = JSON.parse(readFileSync(new URL('../docs/font-provenance.json',import.meta.url),'utf8'));
