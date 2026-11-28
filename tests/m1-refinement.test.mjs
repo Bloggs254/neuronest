@@ -12,8 +12,8 @@ test('visual refinement retains all three prices and exact package limitations',
     ['95,000',['Ten pages','Catalogue with up to 50 product entries; no cart','English and Kiswahili homepage','Branch and staff contact information']]
   ];
   packages.forEach((p,i)=>{assert.ok(text(p).includes(expected[i][0]));assert.deepEqual([...p.matchAll(/<li>(.*?)<\/li>/g)].map(m=>text(m[1])),expected[i][1]);});
-  assert.match(html,/Timelines, ongoing support and commercial terms remain subject to approval/);
-  assert.match(html,/not an offer or a quote/);
+  assert.match(html,/Timelines, ongoing support and commercial terms are confirmed in a written proposal/);
+  assert.match(html,/Final scope and quotation/);
   assert.doesNotMatch(html,/Most popular|Best seller|Guaranteed|Save \d+%/i);
 });
 test('portfolio enlargement is a local genuine screenshot, not a demo or new capability',()=>{

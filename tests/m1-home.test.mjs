@@ -15,7 +15,7 @@ test('M1 section order, anchors and five service URLs remain explicit in static 
 });
 test('M1 cannot collect or deliver inquiries or load legacy assistant, feedback or motion', () => {
   assert.doesNotMatch(html, /<form\b|<input\b|<textarea\b|mailto:|tel:|wa\.me|feedback\.js|app\.js|gsap|art-motion|nest-sculpture|data-service=/i);
-  assert.match(html, /Contact is not connected yet/);
+  assert.match(html, /Direct enquiries are temporarily unavailable/);
   assert.match(html, /connect-src 'none'/);
   assert.match(html, /form-action 'none'/);
   const js = read('assets/js/site.js');
@@ -25,8 +25,8 @@ test('M1 cannot collect or deliver inquiries or load legacy assistant, feedback 
 test('provisional commercial details and project status are unambiguous', () => {
   for (const price of ['35,000','65,000','95,000']) assert.ok(html.includes(price));
   assert.doesNotMatch(html, /55,000|25,000|30,000|50,000|5,000 a month/);
-  assert.match(html, /Local review only/);
-  assert.match(html, /not an offer or a quote/);
+  assert.match(html, /Indicative website packages/);
+  assert.match(html, /Final scope and quotation/);
   assert.match(html, /Not yet an incorporated company/);
   assert.match(html, /In development/);
   assert.match(html, /Concept, not a client project/);

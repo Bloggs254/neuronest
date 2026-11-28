@@ -8,4 +8,3 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 /* Let the browser defer off-screen section rendering; content stays in the DOM and accessibility tree. */
-@supports(content-visibility:auto){.band{content-visibility:auto;contain-intrinsic-block-size:auto 900px}@media(min-width:961px){.band{contain-intrinsic-block-size:auto 700px}}@media print{.band{content-visibility:visible;contain-intrinsic-block-size:none}}}

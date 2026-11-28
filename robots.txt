@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# Staging protection. Replace only during an approved production cutover.
+Sitemap: https://bloggs254.github.io/neuronest/sitemap.xml
