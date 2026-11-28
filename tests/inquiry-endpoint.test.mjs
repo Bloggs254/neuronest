@@ -1,0 +1,16 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { mkdtempSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import path from 'node:path';
+import { openInquiryStore } from '../server/inquiry-core.mjs';
+import { createInquiryServer } from '../server/inquiry-server.mjs';
+
+const valid=overrides=>({name:'Amina Test',phone:'+254 700 000 000',email:'amina@example.test',service:'website',message:'Please help with a clear business website.',consent:'yes',website:'',startedAt:String(Date.now()-5000),...overrides});
+async function fixture({limit=5}={}){const dir=mkdtempSync(path.join(tmpdir(),'nn-api-'));const store=openInquiryStore(path.join(dir,'inquiries.sqlite'));let calls=0;const server=createInquiryServer({config:{enabled:true,notificationAddress:'test@example.test'},store,notify:async()=>{calls++},rateLimit:(()=>{let n=0;return()=>++n<=limit})()});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const base=`http://127.0.0.1:${server.address().port}`;return {store,server,base,calls:()=>calls,close:()=>new Promise(resolve=>server.close(()=>{store.close();resolve()}))}}
+async function post(base,data){return fetch(`${base}/api/inquiry`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(data)})}
+
+test('valid inquiry is stored and notification is attempted',async()=>{const f=await fixture();try{const response=await post(f.base,valid());const body=await response.json();assert.equal(response.status,201);assert.equal(body.ok,true);assert.equal(f.store.get(body.id).status,'notified');assert.equal(f.calls(),1)}finally{await f.close()}});
+test('invalid and HTML-bearing inquiries are rejected',async()=>{const f=await fixture();try{for(const data of [valid({phone:'12'}),valid({message:'<b>hello there</b>'}),valid({startedAt:String(Date.now())})]){const response=await post(f.base,data);assert.equal(response.status,422)}}finally{await f.close()}});
+test('honeypot is rejected and rate limit returns 429',async()=>{const f=await fixture({limit:1});try{const spam=await post(f.base,valid({website:'bot'}));assert.equal(spam.status,422);const limited=await post(f.base,valid());assert.equal(limited.status,429)}finally{await f.close()}});
+test('disabled production config returns the honest not-open state',async()=>{const dir=mkdtempSync(path.join(tmpdir(),'nn-api-off-'));const store=openInquiryStore(path.join(dir,'inquiries.sqlite'));const server=createInquiryServer({config:{enabled:false,notificationAddress:'[TODO: verified notification email]'},store});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));try{const response=await post(`http://127.0.0.1:${server.address().port}`,valid());assert.equal(response.status,503);assert.match((await response.json()).message,/not open yet/i)}finally{await new Promise(resolve=>server.close(resolve));store.close()}});

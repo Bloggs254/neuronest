@@ -6,9 +6,10 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const dist=path.join(root,'dist');
 const base='https://bloggs254.github.io/neuronest/';
 const esc=value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
-const publicPages=['','privacy.html','services/websites.html','services/ai-assistants.html','services/automation.html','services/business-systems.html','services/marketing.html','work/','work/openduka.html','work/inventory.html','work/stockroom.html','work/shopfront.html','work/frontdesk.html','work/flowboard.html','work/campaign-kit.html'];
+const publicPages=['','privacy.html','terms.html','services/websites.html','services/ai-assistants.html','services/automation.html','services/business-systems.html','services/marketing.html','work/','work/openduka.html','work/inventory.html','work/stockroom.html','work/shopfront.html','work/frontdesk.html','work/flowboard.html','work/campaign-kit.html'];
 const meta={
   'index.html':['NeuroNest | Websites, AI assistants and business systems in Kenya','Professional websites, AI assistants and practical business systems for businesses in Kenya and across East Africa.'],
+  'terms.html':['Website terms — NeuroNest','Plain-English NeuroNest website package and optional care-plan terms for review.'],
   'privacy.html':['Privacy and inquiry handling — NeuroNest','How NeuroNest handles website information and prepares for future inquiry services.'],
   'work/index.html':['Our work — NeuroNest','Verified NeuroNest product screens and clearly labelled concepts.'],
   'work/openduka.html':['OpenDuka product evidence — NeuroNest','Genuine OpenDuka product screenshots using fictional sample data, with current development limits stated clearly.']
@@ -53,4 +54,4 @@ privacy=privacy
   .replace('<h2>Decisions required before real inquiries</h2><div class="legal-draft"><p>Owner approval is still required for the lawful basis, retention period, inbox and processors, any international transfer safeguards, access/erasure operating procedure and the final customer notice. This draft is implementation evidence, not legal advice or launch approval.</p></div>','<h2>Before real enquiries</h2><div class="legal-draft"><p>NeuroNest will verify the responsible inbox, processors, retention period, access and deletion procedure, and any transfer safeguards before activating customer enquiries. The customer notice will be updated when those details are confirmed.</p></div>');
 await writeFile(path.join(dist,'privacy.html'),privacy);
 await cp(path.join(dist,'assets','brand','social-preview.png'),path.join(root,'assets','brand','social-preview.png'));
-console.log('Built production metadata, indexing files and 15 approved public routes.');
+console.log(`Built production metadata, indexing files and ${publicPages.length} approved public routes.`);

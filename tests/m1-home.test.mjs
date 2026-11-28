@@ -6,16 +6,18 @@ const read = name => readFileSync(new URL('../dist/' + name, import.meta.url), '
 const html = read('index.html');
 
 test('M1 section order, anchors and five service URLs remain explicit in static HTML', () => {
-  const sequence = ['hero-title','intro-title','solutions','packages','work','approach','why-title','guides','about','faq','contact'];
+  const sequence = ['hero-title','intro-title','solutions','packages','work','how-we-work','why-neuronest','guides','about','faq','contact'];
   let last = -1;
   for (const id of sequence) { const index = html.indexOf(`id="${id}"`); assert.ok(index > last, id); last = index; }
   assert.match(html, /class="skip" href="#main"/);
   assert.equal([...html.matchAll(/<h1\b/g)].length, 1);
   for (const slug of ['websites','marketing','ai-assistants','automation','business-systems']) assert.ok(html.includes(`href="services/${slug}.html"`));
 });
-test('M1 cannot collect or deliver inquiries or load legacy assistant, feedback or motion', () => {
-  assert.doesNotMatch(html, /<form\b|<input\b|<textarea\b|mailto:|tel:|wa\.me|feedback\.js|app\.js|gsap|art-motion|nest-sculpture|data-service=/i);
-  assert.match(html, /Direct enquiries are temporarily unavailable/);
+test('GitHub Pages inquiry form is visible but disabled and cannot deliver', () => {
+  assert.match(html, /<form class="inquiry-form"/);
+  assert.match(html, /<fieldset disabled>/);
+  assert.match(html, /Enquiries are not open yet/);
+  assert.doesNotMatch(html, /mailto:|tel:|wa\.me|feedback\.js|app\.js|gsap|art-motion|nest-sculpture|data-service=|\?service=/i);
   assert.match(html, /connect-src 'none'/);
   assert.match(html, /form-action 'none'/);
   const js = read('assets/js/site.js');
@@ -27,7 +29,7 @@ test('provisional commercial details and project status are unambiguous', () => 
   assert.doesNotMatch(html, /55,000|25,000|30,000|50,000|5,000 a month/);
   assert.match(html, /Indicative website packages/);
   assert.match(html, /Final scope and quotation/);
-  assert.match(html, /Not yet an incorporated company/);
+  assert.match(html, /\[TODO: paste approved About copy\]/);
   assert.match(html, /In development/);
   assert.match(html, /Concept, not a client project/);
   assert.doesNotMatch(html, /<a[^>]+href="(?:https?:|[^\"]*guides\/)/);

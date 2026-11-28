@@ -25,6 +25,8 @@ Weekly Dependabot pull requests propose action updates; they are not automatical
 
 ## Reporting an issue
 
+[TODO: verified security reporting channel]
+
 No monitored security-reporting channel has been verified yet. Do not publish or rely on an email, phone number, WhatsApp link or `security.txt` until ownership, monitoring, receipt and reply are tested and approved. Do not place passwords, personal customer records or working credentials in public issues. If a credential is exposed, revoke or rotate it promptly; removing it from a later commit is insufficient.
 
 References: [GitHub Actions secure use](https://docs.github.com/en/actions/reference/security/secure-use), [OWASP CSP guidance](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html), [MDN frame-ancestors limitations](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors).

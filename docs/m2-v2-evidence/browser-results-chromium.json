@@ -1,0 +1,507 @@
+{
+  "checkedAt": "2026-11-28T11:03:59.028Z",
+  "engine": "chromium",
+  "results": [
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "privacy.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "terms.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "services/websites.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "services/ai-assistants.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "services/automation.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "services/business-systems.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "services/marketing.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "work/",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "work/openduka.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "work/inventory.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "work/stockroom.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "work/shopfront.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "work/frontdesk.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "work/flowboard.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "phone-390",
+      "route": "work/campaign-kit.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "privacy.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "terms.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "services/websites.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "services/ai-assistants.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "services/automation.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "services/business-systems.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "services/marketing.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "work/",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "work/openduka.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "work/inventory.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "work/stockroom.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "work/shopfront.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "work/frontdesk.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "work/flowboard.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "tablet-768",
+      "route": "work/campaign-kit.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "privacy.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "terms.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "services/websites.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "services/ai-assistants.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "services/automation.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "services/business-systems.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "services/marketing.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "work/",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "work/openduka.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "work/inventory.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "work/stockroom.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "work/shopfront.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "work/frontdesk.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "work/flowboard.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "viewport": "desktop-1280",
+      "route": "work/campaign-kit.html",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "lang": "en-KE",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "mode": "javascript-off",
+      "viewport": "phone-390",
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "formDisabled": true,
+      "overflow": 0
+    },
+    {
+      "engine": "chromium",
+      "mode": "reduced-motion",
+      "viewport": "phone-390",
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "reduced": true
+    }
+  ],
+  "failures": []
+}

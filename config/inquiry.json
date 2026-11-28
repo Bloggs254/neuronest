@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "endpointUrl": "[TODO: VPS inquiry endpoint URL]",
+  "notificationAddress": "[TODO: verified notification email]",
+  "verifiedPhone": "[TODO: verified phone]",
+  "verifiedEmail": "[TODO: verified email]"
+}

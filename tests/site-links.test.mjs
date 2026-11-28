@@ -14,7 +14,7 @@ function pagesIn(directory) {
 
 test('every standalone page has a resolvable local navigation and asset path', () => {
   const pages = pagesIn(root);
-  assert.equal(pages.length, 16);
+  assert.equal(pages.length, 17);
   for (const page of pages) {
     const html = readFileSync(page, 'utf8');
     for (const match of html.matchAll(/\b(?:href|src|srcset)="([^"]+)"/g)) {
@@ -29,10 +29,11 @@ test('every standalone page has a resolvable local navigation and asset path', (
   }
 });
 
-test('all service enquiry links target a known service on the homepage', () => {
+test('all service enquiry links target contact without stale query parameters', () => {
   const slugs = ['websites', 'ai-assistants', 'automation', 'business-systems', 'marketing'];
   for (const slug of slugs) {
     const html = readFileSync(resolve(root, 'services', `${slug}.html`), 'utf8');
-    assert.ok(html.includes(`../index.html?service=${slug}#contact`));
+    assert.ok(html.includes('../index.html#contact'));
+    assert.ok(!html.includes('?service='));
   }
 });
