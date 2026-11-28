@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="NeuroNest icon">
+  <path d="M52 150 V50 L148 150 V50" fill="none" stroke="#12102B" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="52" cy="50" r="20" fill="#12102B"/>
+  <circle cx="52" cy="150" r="20" fill="#12102B"/>
+  <circle cx="148" cy="150" r="20" fill="#12102B"/>
+  <circle cx="148" cy="50" r="20" fill="#FFB020"/>
+</svg>

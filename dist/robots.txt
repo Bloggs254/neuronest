@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# Staging protection. Replace only during an approved production cutover.

@@ -1,0 +1,4 @@
+/* Master brief v1.0. Brand values live here; logo SVGs retain supplied colours. */
+@font-face{font-family:Inter;font-style:normal;font-weight:400 500;font-display:swap;src:url('../fonts/inter-latin.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:600 700;font-display:swap;src:url('../fonts/plus-jakarta-sans-latin.woff2') format('woff2')}
+:root{--indigo:#12102B;--indigo-lift:#1E1B45;--amber:#FFB020;--white:#FFFFFF;--offwhite:#F7F7FB;--slate:#6B6A80;--radius:14px;--font-head:'Plus Jakarta Sans',system-ui,sans-serif;--font-body:Inter,system-ui,sans-serif;--line:rgba(107,106,128,.25);--line-dark:rgba(255,255,255,.22)}

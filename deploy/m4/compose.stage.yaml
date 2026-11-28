@@ -1,0 +1,28 @@
+name: neuronest-stage-draft
+services:
+  edge:
+    # Deliberately invalid digest: verify and pin an approved image before any live work.
+    image: nginx:1.27.4-alpine@sha256:REPLACE_AFTER_VERIFICATION
+    profiles: [owner-approved-live-work-only]
+    read_only: true
+    security_opt: [no-new-privileges:true]
+    cap_drop: [ALL]
+    cap_add: [NET_BIND_SERVICE]
+    ports: ["127.0.0.1:8080:8080"]
+    volumes:
+      - ../../dist:/srv/neuronest:ro
+      - ./nginx/neuronest.conf.template:/etc/nginx/conf.d/default.conf:ro
+      - edge-cache:/var/cache/nginx
+      - edge-run:/var/run
+    networks: [public-edge]
+    restart: unless-stopped
+
+  # OpenDuka is intentionally absent. Its source, OD definitions and approved image are unavailable.
+  # Add it only after a separate source review and explicit live-work approval.
+
+networks:
+  public-edge:
+    internal: true
+volumes:
+  edge-cache:
+  edge-run:

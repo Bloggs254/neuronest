@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { mkdtempSync, readFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import path from 'node:path';
+import { openInquiryStore, validateInquiry } from '../local/inquiry-core.mjs';
+const valid=overrides=>({name:'Amina Test',business:'Sample Shop',reply:'amina@example.test',service:'websites',message:'This is a synthetic inquiry about a sample website.',budget:'not-sure',timeline:'later',consent:'yes',website:'',idempotencyKey:'synthetic_key_123456',...overrides});
+test('server validation accepts bounded synthetic input and rejects abuse',()=>{assert.equal(validateInquiry(valid()).ok,true);for(const change of [{name:'A'},{service:'unknown'},{message:'short'},{consent:''},{website:'bot'},{message:'My password is secret'}])assert.equal(validateInquiry(valid(change)).ok,false)});
+test('durable fake delivery records state, idempotency and safe retry',()=>{const dir=mkdtempSync(path.join(tmpdir(),'nn-m2-'));const store=openInquiryStore(path.join(dir,'queue.sqlite'));const checked=validateInquiry(valid()).data;const failed=store.accept(checked,'fail');assert.equal(failed.status,'failed');assert.equal(failed.failure_code,'FAKE_DELIVERY_FAILED');const duplicate=store.accept(checked,'deliver');assert.equal(duplicate.id,failed.id);assert.equal(duplicate.duplicate,true);const delivered=store.retry(failed.id,'deliver');assert.equal(delivered.status,'delivered');assert.equal(store.retry(failed.id,'deliver'),null);store.close()});
+test('failure alert logging contains status identifiers, not submitted content',()=>{const source=readFileSync(new URL('../local/inquiry-server.mjs',import.meta.url),'utf8');assert.match(source,/fake_delivery_alert/);assert.match(source,/id:record\.id,status:record\.status/);assert.doesNotMatch(source,/console\.(?:log|warn)\([^\n]*(?:checked\.data|params|message|reply|name)/)});
