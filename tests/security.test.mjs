@@ -42,6 +42,10 @@ test('every page restricts scripts, connections and native form submission befor
     assert.doesNotMatch(html, /\son\w+\s*=/i, `${file}: inline event handler`);
     assert.doesNotMatch(html, /<base\b/i, `${file}: unexpected base URL`);
     for (const script of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) {
+      if (/\btype="application\/ld\+json"/i.test(script[1])) {
+        assert.doesNotThrow(() => JSON.parse(script[2]), `${file}: invalid JSON-LD`);
+        continue;
+      }
       const src = /\bsrc="([^"]+)"/.exec(script[1]);
       assert.ok(src, `${file}: executable inline script`);
       assert.doesNotMatch(src[1], /^(?:[a-z]+:|\/\/)/i, `${file}: remote script`);

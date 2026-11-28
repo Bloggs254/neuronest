@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "node serve.mjs",
-    "build:production": "node scripts/build-social-preview.mjs && node scripts/build-production.mjs && node scripts/sync-public.mjs",
+    "build:production": "node scripts/build-social-preview.mjs && node scripts/build-production.mjs && node scripts/build-m3-v2.mjs && node scripts/sync-public.mjs",
     "m2:local": "node local/inquiry-server.mjs",
     "inquiry:server": "node server/inquiry-server.mjs",
     "test": "node --test tests/*.test.mjs"

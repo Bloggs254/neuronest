@@ -35,9 +35,11 @@
 .node{transform-box:fill-box;transform-origin:50% 100%;animation:drop 1.4s linear 1.2s both,hop 4s linear 2.6s infinite}
 .hero-n{transform-origin:50% 90%;animation:jolt .9s ease-out 1.8s}
 .pkt{opacity:0;animation:travel 4s linear 2.6s infinite;animation-fill-mode:backwards}
+.logo .amb{animation:drop 1.4s linear .2s both}
+.logo:hover .amb{animation:hop 1s linear 1}
 }
 .logo svg{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
-.logo .amb{transform-box:fill-box;transform-origin:center;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.logo .amb{transform-box:fill-box;transform-origin:50% 100%;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
 .logo:hover svg{transform:rotate(-6deg)}
 .logo:hover .amb{transform:scale(1.4)}
 .hero-n{cursor:pointer;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
@@ -53,7 +55,8 @@
 @keyframes catch{0%,40%{transform:scale(1)}60%{transform:scale(1.55)}80%{transform:scale(.92)}100%{transform:scale(1)}}
 .hdr-in{animation:hdr-shrink linear both;animation-timeline:--hero;animation-range:exit 0% exit 35%}
 .hero-vis{animation:leave linear both;animation-timeline:--hero;animation-range:exit 5% exit 65%}
-.logo .amb{animation:catch linear;animation-timeline:--hero;animation-range:exit 25% exit 75%}
+.logo .amb{animation:drop 1.4s linear .2s both,catch linear;animation-timeline:auto,--hero;animation-range:normal,exit 25% exit 75%}
+.logo:hover .amb{animation:hop 1s linear 1;animation-timeline:auto;animation-range:normal}
 }
 }
 @media (prefers-reduced-motion:reduce){.pkt{display:none}}

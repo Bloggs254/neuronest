@@ -32,8 +32,9 @@ test('provisional commercial details and project status are unambiguous', () => 
   assert.match(html, /\[TODO: approved About copy\]/);
   assert.match(html, /In development/);
   assert.match(html, /Concept, not a client project/);
-  assert.doesNotMatch(html, /<a[^>]+href="(?:https?:|[^\"]*guides\/)/);
-  assert.doesNotMatch(html, /Bloggs|Joe|Follow on X|<script[^>]+ld\+json/);
+  assert.match(html, /<a[^>]+href="guides\/">Guides<\/a>/);
+  assert.doesNotMatch(html, /Bloggs|Joe|Follow on X/);
+  assert.match(html, /<script type="application\/ld\+json">/);
 });
 test('N geometry and supplied CSS-only motion sequence respect the brand and fallbacks', () => {
   const light = read('assets/brand/neuronest-icon-light.svg');

@@ -4,7 +4,8 @@ import { fileURLToPath } from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const dist=path.join(root,'dist');
-const base='https://bloggs254.github.io/neuronest/';
+const siteConfig=JSON.parse(await readFile(path.join(root,'config','site.json'),'utf8'));
+const base=siteConfig.siteUrl.endsWith('/')?siteConfig.siteUrl:`${siteConfig.siteUrl}/`;
 const esc=value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 const publicPages=['','privacy.html','terms.html','services/websites.html','services/ai-assistants.html','services/automation.html','services/business-systems.html','services/marketing.html','work/','work/openduka.html','work/inventory.html','work/stockroom.html','work/shopfront.html','work/frontdesk.html','work/flowboard.html','work/campaign-kit.html'];
 const meta={

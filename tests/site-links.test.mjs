@@ -14,7 +14,7 @@ function pagesIn(directory) {
 
 test('every standalone page has a resolvable local navigation and asset path', () => {
   const pages = pagesIn(root);
-  assert.equal(pages.length, 17);
+  assert.equal(pages.length, 23);
   for (const page of pages) {
     const html = readFileSync(page, 'utf8');
     for (const match of html.matchAll(/\b(?:href|src|srcset)="([^"]+)"/g)) {
@@ -22,8 +22,9 @@ test('every standalone page has a resolvable local navigation and asset path', (
       if (/^(?:https?:|mailto:|tel:|#|data:)/.test(link)) continue;
       const pathname = decodeURIComponent(link.split(/[?#]/)[0]);
       if (!pathname) continue;
-      const target = resolve(dirname(page), pathname);
+      let target = resolve(dirname(page), pathname);
       assert.ok(target.startsWith(root), `Path escapes public root: ${link}`);
+      if (existsSync(target) && statSync(target).isDirectory()) target = resolve(target, 'index.html');
       assert.ok(existsSync(target) && statSync(target).isFile(), `${page}: missing ${link}`);
     }
   }
@@ -36,4 +37,5 @@ test('all service enquiry links target contact without stale query parameters', 
     assert.ok(html.includes('../index.html#contact'));
     assert.ok(!html.includes('?service='));
   }
+  for (const page of pagesIn(root)) assert.ok(!readFileSync(page, 'utf8').includes('?service='), `${page}: stale service query`);
 });

@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bloggs254.github.io/neuronest/</loc></url>
+  <url><loc>https://bloggs254.github.io/neuronest/guides/</loc></url>
   <url><loc>https://bloggs254.github.io/neuronest/privacy.html</loc></url>
-  <url><loc>https://bloggs254.github.io/neuronest/terms.html</loc></url>
-  <url><loc>https://bloggs254.github.io/neuronest/services/websites.html</loc></url>
   <url><loc>https://bloggs254.github.io/neuronest/services/ai-assistants.html</loc></url>
   <url><loc>https://bloggs254.github.io/neuronest/services/automation.html</loc></url>
   <url><loc>https://bloggs254.github.io/neuronest/services/business-systems.html</loc></url>
   <url><loc>https://bloggs254.github.io/neuronest/services/marketing.html</loc></url>
+  <url><loc>https://bloggs254.github.io/neuronest/services/websites.html</loc></url>
+  <url><loc>https://bloggs254.github.io/neuronest/terms.html</loc></url>
   <url><loc>https://bloggs254.github.io/neuronest/work/</loc></url>
-  <url><loc>https://bloggs254.github.io/neuronest/work/openduka.html</loc></url>
-  <url><loc>https://bloggs254.github.io/neuronest/work/inventory.html</loc></url>
-  <url><loc>https://bloggs254.github.io/neuronest/work/stockroom.html</loc></url>
-  <url><loc>https://bloggs254.github.io/neuronest/work/shopfront.html</loc></url>
-  <url><loc>https://bloggs254.github.io/neuronest/work/frontdesk.html</loc></url>
-  <url><loc>https://bloggs254.github.io/neuronest/work/flowboard.html</loc></url>
   <url><loc>https://bloggs254.github.io/neuronest/work/campaign-kit.html</loc></url>
+  <url><loc>https://bloggs254.github.io/neuronest/work/flowboard.html</loc></url>
+  <url><loc>https://bloggs254.github.io/neuronest/work/frontdesk.html</loc></url>
+  <url><loc>https://bloggs254.github.io/neuronest/work/inventory.html</loc></url>
+  <url><loc>https://bloggs254.github.io/neuronest/work/openduka.html</loc></url>
+  <url><loc>https://bloggs254.github.io/neuronest/work/shopfront.html</loc></url>
+  <url><loc>https://bloggs254.github.io/neuronest/work/stockroom.html</loc></url>
 </urlset>

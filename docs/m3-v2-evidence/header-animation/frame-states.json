@@ -1,0 +1,91 @@
+{
+  "capturedAt": "2026-11-28T12:47:18.079Z",
+  "frames": [
+    {
+      "label": "01-0.3s-drop",
+      "atMs": 300,
+      "state": {
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, -177.892)",
+        "animationName": "drop, catch",
+        "animationDelay": "0.2s, 0s",
+        "animationTimeline": "auto, --hero"
+      }
+    },
+    {
+      "label": "02-0.6s-drop",
+      "atMs": 600,
+      "state": {
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, -104.883)",
+        "animationName": "drop, catch",
+        "animationDelay": "0.2s, 0s",
+        "animationTimeline": "auto, --hero"
+      }
+    },
+    {
+      "label": "03-1.0s-first-bounce",
+      "atMs": 1000,
+      "state": {
+        "opacity": "1",
+        "transform": "matrix(0.940819, 0, 0, 1.09863, 0, -37.4811)",
+        "animationName": "drop, catch",
+        "animationDelay": "0.2s, 0s",
+        "animationTimeline": "auto, --hero"
+      }
+    },
+    {
+      "label": "04-1.4s-second-bounce",
+      "atMs": 1400,
+      "state": {
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, -9.3846)",
+        "animationName": "drop, catch",
+        "animationDelay": "0.2s, 0s",
+        "animationTimeline": "auto, --hero"
+      }
+    },
+    {
+      "label": "05-2.0s-settled",
+      "atMs": 2000,
+      "state": {
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "animationName": "drop, catch",
+        "animationDelay": "0.2s, 0s",
+        "animationTimeline": "auto, --hero"
+      }
+    },
+    {
+      "label": "06-hover-bounce",
+      "atMs": 2000,
+      "state": {
+        "opacity": "1",
+        "transform": "matrix(1.00736, 0, 0, 1.01117, 0, -9.88168)",
+        "animationName": "hop",
+        "animationDelay": "0s",
+        "animationTimeline": "auto"
+      }
+    },
+    {
+      "label": "07-scroll-catch",
+      "atMs": 2000,
+      "state": {
+        "opacity": "1",
+        "transform": "matrix(1.01544, 0, 0, 1.01544, 0, 0)",
+        "animationName": "drop, catch",
+        "animationDelay": "0.2s, 0s",
+        "animationTimeline": "auto, --hero"
+      }
+    },
+    {
+      "label": "08-reduced-motion-still",
+      "atMs": 350,
+      "state": {
+        "opacity": "1",
+        "transform": "none",
+        "animationName": "none"
+      }
+    }
+  ]
+}

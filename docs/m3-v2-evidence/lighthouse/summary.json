@@ -1,0 +1,190 @@
+{
+  "auditedAt": "2026-11-28T13:09:56.679Z",
+  "formFactor": "mobile",
+  "results": [
+    {
+      "route": "/",
+      "url": "http://127.0.0.1:4213/",
+      "performance": 93,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "404.html",
+      "url": "http://127.0.0.1:4213/404.html",
+      "performance": 99,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 61
+    },
+    {
+      "route": "privacy.html",
+      "url": "http://127.0.0.1:4213/privacy.html",
+      "performance": 99,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "terms.html",
+      "url": "http://127.0.0.1:4213/terms.html",
+      "performance": 99,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "guides/",
+      "url": "http://127.0.0.1:4213/guides/",
+      "performance": 99,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "guides/stock-going-missing/",
+      "url": "http://127.0.0.1:4213/guides/stock-going-missing/",
+      "performance": 95,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 61
+    },
+    {
+      "route": "guides/profitable-but-no-cash/",
+      "url": "http://127.0.0.1:4213/guides/profitable-but-no-cash/",
+      "performance": 96,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 61
+    },
+    {
+      "route": "guides/run-your-shop-remotely/",
+      "url": "http://127.0.0.1:4213/guides/run-your-shop-remotely/",
+      "performance": 99,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 61
+    },
+    {
+      "route": "guides/stock-count-mismatch/",
+      "url": "http://127.0.0.1:4213/guides/stock-count-mismatch/",
+      "performance": 99,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 61
+    },
+    {
+      "route": "guides/ai-for-supermarkets/",
+      "url": "http://127.0.0.1:4213/guides/ai-for-supermarkets/",
+      "performance": 99,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 61
+    },
+    {
+      "route": "services/websites.html",
+      "url": "http://127.0.0.1:4213/services/websites.html",
+      "performance": 99,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "services/ai-assistants.html",
+      "url": "http://127.0.0.1:4213/services/ai-assistants.html",
+      "performance": 94,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "services/automation.html",
+      "url": "http://127.0.0.1:4213/services/automation.html",
+      "performance": 99,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "services/business-systems.html",
+      "url": "http://127.0.0.1:4213/services/business-systems.html",
+      "performance": 94,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "services/marketing.html",
+      "url": "http://127.0.0.1:4213/services/marketing.html",
+      "performance": 95,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "work/",
+      "url": "http://127.0.0.1:4213/work/",
+      "performance": 95,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "work/openduka.html",
+      "url": "http://127.0.0.1:4213/work/openduka.html",
+      "performance": 94,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "work/inventory.html",
+      "url": "http://127.0.0.1:4213/work/inventory.html",
+      "performance": 100,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "work/stockroom.html",
+      "url": "http://127.0.0.1:4213/work/stockroom.html",
+      "performance": 97,
+      "accessibility": 97,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "work/shopfront.html",
+      "url": "http://127.0.0.1:4213/work/shopfront.html",
+      "performance": 99,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "work/frontdesk.html",
+      "url": "http://127.0.0.1:4213/work/frontdesk.html",
+      "performance": 99,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "work/flowboard.html",
+      "url": "http://127.0.0.1:4213/work/flowboard.html",
+      "performance": 99,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "route": "work/campaign-kit.html",
+      "url": "http://127.0.0.1:4213/work/campaign-kit.html",
+      "performance": 99,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 92
+    }
+  ]
+}
