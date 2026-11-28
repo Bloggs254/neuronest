@@ -4,7 +4,7 @@ Controlling authority: NEURONEST-MASTER-BRIEF-v1.0.md sections 1–10, plus owne
 
 Design plan: docs/M1-DESIGN-PLAN.md. Named palette and font definitions: dist/assets/css/brand.css. Homepage layout: dist/assets/css/site.css. Navigation: dist/assets/js/site.js. These shared definitions are ready for later approved page work; legacy page CSS is preserved pending M2.
 
-Use indigo, white and offwhite surfaces with restrained amber, licensed Latin Plus Jakarta Sans 600/700 and Inter 400/500. No gradients, shadows, sculpture, hero panels or generated imagery. The supplied N preserves its exact geometry. Only its hero presentation animates: a one-time stroke draw and node entrance, then static. Reduced motion removes all animation.
+Use indigo, white and offwhite surfaces with restrained amber, licensed Latin Plus Jakarta Sans 600/700 and Inter 400/500. No gradients, shadows, sculpture, hero panels or generated imagery. The supplied N preserves its exact geometry. Its CSS-only hero sequence draws the stroke, introduces the nodes, drops and bounces the amber node, then runs the supplied restrained hop/travel loop. Hover responds without JavaScript. Supported browsers hand the motion into the sticky header through a view timeline; unsupported browsers keep the full-height sticky header and still hero. Reduced motion removes the sequence while keeping the complete mark visible.
 
 Homepage order follows the brief. Price previews and founder statement are provisional local content. Guides are pending, not invented pages. Existing project screenshots show sample data/concepts; no live demo newly exposed. Static contact placeholder collects and sends nothing. All five service URLs and existing section anchors remain.
 

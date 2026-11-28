@@ -10,3 +10,52 @@
 /* Let the browser defer off-screen section rendering; content stays in the DOM and accessibility tree. */
 
 .inquiry-form{margin-top:24px}.inquiry-form fieldset{border:0;padding:0;margin:0;min-width:0}.inquiry-form legend{font:600 1.25rem var(--font-head);margin-bottom:18px}.inquiry-fields{display:grid;gap:16px}.inquiry-form label{display:grid;gap:7px;font-weight:500}.inquiry-form label span{font-weight:400}.inquiry-form input,.inquiry-form select,.inquiry-form textarea{width:100%;min-height:48px;padding:11px 12px;border:1px solid var(--line-dark);border-radius:var(--radius);background:var(--white);color:var(--indigo);font:inherit}.inquiry-form textarea{resize:vertical}.inquiry-form input:disabled,.inquiry-form select:disabled,.inquiry-form textarea:disabled,.inquiry-form button:disabled{opacity:.72;cursor:not-allowed}.inquiry-consent{grid-template-columns:24px 1fr!important;align-items:start;margin-block:18px;font-weight:400!important}.inquiry-consent input{width:20px;min-height:20px}.inquiry-honeypot{position:absolute!important;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%)}.inquiry-state{margin-top:18px;padding-top:18px;border-top:1px solid var(--line-dark);font-weight:500}@media(min-width:761px){.inquiry-fields{grid-template-columns:1fr 1fr}.inquiry-message{grid-column:1/-1}}
+
+
+/* Owner-supplied CSS-only N sequence. Defaults stay visible and still. */
+.site-header{position:sticky;top:0;z-index:20;background:var(--indigo);border-bottom:1px solid var(--line-dark)}
+.hdr-in{height:76px;min-height:0;padding-block:0}
+.logo{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--white);text-decoration:none;font:700 1.45rem/1 var(--font-head);letter-spacing:-.01em;flex-shrink:0}
+.logo svg{display:block;width:46px;height:46px;overflow:visible}
+.site-header #nav{color:var(--white)}
+.site-header .nav-contact{border-color:var(--amber);background:var(--amber);color:var(--indigo)}
+.site-header .menu-toggle{border-color:var(--line-dark);background:var(--indigo);color:var(--white)}
+.hero-vis{position:absolute;right:-8px;bottom:28px;width:132px;max-width:440px}
+.hero-vis svg{display:block;width:100%;height:auto;overflow:visible}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes pop{0%{opacity:0;transform:scale(.4)}60%{transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}
+@keyframes drop{0%{transform:translateY(-200px) scale(1,1);opacity:0;animation-timing-function:cubic-bezier(.5,0,1,.6)}8%{opacity:1}42%{transform:translateY(0) scale(1,1);animation-timing-function:linear}47%{transform:translateY(0) scale(1.28,.72);animation-timing-function:cubic-bezier(0,.4,.5,1)}62%{transform:translateY(-38px) scale(.94,1.1);animation-timing-function:cubic-bezier(.5,0,1,.6)}77%{transform:translateY(0) scale(1,1);animation-timing-function:linear}81%{transform:translateY(0) scale(1.14,.86);animation-timing-function:cubic-bezier(0,.4,.5,1)}90%{transform:translateY(-10px) scale(1,1);animation-timing-function:cubic-bezier(.5,0,1,.6)}100%{transform:translateY(0) scale(1,1);opacity:1}}
+@keyframes jolt{0%{transform:none}8%{transform:scale(1.05,.94)}24%{transform:scale(.99,1.02)}40%{transform:none}55%{transform:scale(1.025,.97)}75%{transform:scale(.995,1.01)}100%{transform:none}}
+@keyframes travel{0%{transform:translate(0,0);opacity:0}8%{transform:translate(0,0);opacity:1;animation-timing-function:cubic-bezier(.5,0,1,.6)}20.5%{transform:translate(0,100px);animation-timing-function:linear}38%{transform:translate(-96px,0)}50.5%{transform:translate(-96px,100px);opacity:1}54%{transform:translate(-96px,100px);opacity:0}100%{transform:translate(-96px,100px);opacity:0}}
+@keyframes hop{0%{transform:translateY(0) scale(1,1);animation-timing-function:ease-out}3%{transform:translateY(0) scale(1.18,.82);animation-timing-function:ease-out}8%{transform:translateY(-16px) scale(.95,1.08);animation-timing-function:cubic-bezier(.5,0,1,.6)}15%{transform:translateY(0) scale(1.1,.9);animation-timing-function:ease-out}20%{transform:translateY(0) scale(1,1)}100%{transform:translateY(0) scale(1,1)}}
+@media (prefers-reduced-motion:no-preference){
+.n-draw{stroke-dasharray:1;animation:draw 1s ease-out .2s both}
+.nd{transform-box:fill-box;transform-origin:center;animation:pop .5s ease-out both}
+.nd1{animation-delay:.2s}.nd2{animation-delay:.6s}.nd3{animation-delay:1s}
+.node{transform-box:fill-box;transform-origin:50% 100%;animation:drop 1.4s linear 1.2s both,hop 4s linear 2.6s infinite}
+.hero-n{transform-origin:50% 90%;animation:jolt .9s ease-out 1.8s}
+.pkt{animation:travel 4s linear 2.6s infinite}
+}
+.logo svg{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.logo .amb{transform-box:fill-box;transform-origin:center;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.logo:hover svg{transform:rotate(-6deg)}
+.logo:hover .amb{transform:scale(1.4)}
+.hero-n{cursor:pointer;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.hero-n:hover{transform:scale(1.08) rotate(-6deg)}
+.hero-n:hover .node{animation:none;transform:scale(1.4)}
+.hero-n:hover .pkt{animation-duration:2s}
+@supports (animation-timeline:view()){
+@media (prefers-reduced-motion:no-preference){
+.page{timeline-scope:--hero}
+.hero{view-timeline-name:--hero;view-timeline-axis:block}
+@keyframes hdr-shrink{to{height:58px}}
+@keyframes leave{to{transform:translateY(90px) scale(.92);opacity:0}}
+@keyframes catch{0%,40%{transform:scale(1)}60%{transform:scale(1.55)}80%{transform:scale(.92)}100%{transform:scale(1)}}
+.hdr-in{animation:hdr-shrink linear both;animation-timeline:--hero;animation-range:exit 0% exit 35%}
+.hero-vis{animation:leave linear both;animation-timeline:--hero;animation-range:exit 5% exit 65%}
+.logo .amb{animation:catch linear;animation-timeline:--hero;animation-range:exit 25% exit 75%}
+}
+}
+@media (prefers-reduced-motion:reduce){.pkt{display:none}}
+@media(min-width:761px) and (max-width:960px){.hero-vis{width:180px;bottom:30px}}
+@media(min-width:961px){.hero-vis{position:static;width:80%;max-width:440px;align-self:center;justify-self:end}}

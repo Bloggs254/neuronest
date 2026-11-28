@@ -13,7 +13,7 @@ Deployment status: not deployed, pushed or merged
 - Added Pricing and Guides to the homepage navigation.
 - Confirmed and linked the Guides, How we work, Why NeuroNest and FAQ sections.
 - Removed all obsolete `?service=` links and query handling.
-- Replaced the unapproved founder biography with `[TODO: paste approved About copy]` because the approved founder-content file is not present.
+- Replaced the unapproved founder biography with the exact company-only fallback `[TODO: approved About copy]`; no personal details are published.
 - Added one private inquiry configuration file with disabled status and explicit verification TODOs.
 - Added the short inquiry form in an honest, disabled GitHub Pages state: “Enquiries are not open yet.”
 - Kept the existing Pages CSP unchanged: `connect-src 'none'` and `form-action 'none'`.
@@ -22,23 +22,33 @@ Deployment status: not deployed, pushed or merged
 - Added and linked Privacy and Terms pages. The existing branded 404 page was retained.
 - Verified the Website, AI assistants and Business systems service pages and removed obsolete service-query links from them.
 - Left security contact information unpublished pending verification.
+- Implemented the supplied CSS-only hero N sequence: stroke draw, node pop, amber drop and bounce, N jolt, repeating hop/travel, hover response and scroll hand-over to the sticky header.
+- Preserved visible, still fallbacks for reduced motion, JavaScript-off, CSS-animation-off and browsers without scroll-timeline support.
+- Changed notification delivery to read only `NOTIFY_EMAIL` from the VPS environment. The repository contains no real notification address.
 
-## Exact logo animation blocker
+## Logo animation evidence
 
-`NEURONEST_CODEX_PACK.md` is not present in the repository, the supplied attachment locations or the accessible local filesystem. The exact Part 5 source therefore cannot be read or reproduced faithfully. No substitute animation was invented. The existing live logo and existing motion remain unchanged.
-
-The requested animation-state evidence is consequently not available yet. The missing source is specifically the exact code from Part 5 / `CODEX_LOGO_ANIMATION.md`, including its required markup and selectors.
+- `docs/m2-v2-evidence/logo-animation/01-draw-in.png`
+- `docs/m2-v2-evidence/logo-animation/02-node-pop.png`
+- `docs/m2-v2-evidence/logo-animation/03-ball-drop.png`
+- `docs/m2-v2-evidence/logo-animation/04-ball-bounce.png`
+- `docs/m2-v2-evidence/logo-animation/05-hop-with-dot.png`
+- `docs/m2-v2-evidence/logo-animation/06-hover.png`
+- `docs/m2-v2-evidence/logo-animation/07-scroll-handover.png`
+- `docs/m2-v2-evidence/logo-animation/08-reduced-motion.png`
+- `docs/m2-v2-evidence/logo-animation/frame-states.json` records computed animation, transform and opacity states.
 
 ## Founder-copy blocker
 
-`marketing/ws3b-founder-content.md` is not present. The homepage uses the required `[TODO: paste approved About copy]` fallback and does not publish an invented founder biography.
+`marketing/ws3b-founder-content.md` is not present. The homepage therefore uses `[TODO: approved About copy]` and nothing else in the About copy area.
 
 ## Automated results
 
-- Node test suite: 81 passed, 0 failed.
+- Node test suite: 83 passed, 0 failed.
 - Chromium/Edge browser regression: 16 routes at 390, 768 and 1280 px, 48 route/viewport checks, 0 failures.
 - JavaScript-off check at 390 px: passed; the page remains readable and the form remains disabled.
 - Reduced-motion check at 390 px: passed; the media preference is detected and the page remains readable without overflow.
+- CSS-animation-off check at 390 px: passed; the hero, nodes and travelling dot remain visible and still.
 - Console and page errors: none in the Chromium run.
 - Horizontal overflow: none in the Chromium run.
 - Firefox: the installed Firefox build did not complete the Playwright automation within 90 seconds, so Firefox is not claimed as passed. No site failure was reported before the runner stalled.
@@ -57,9 +67,8 @@ Detailed machine-readable results: `docs/m2-v2-evidence/browser-results-chromium
 - `[TODO: verified notification email]`
 - `[TODO: verified phone]`
 - `[TODO: verified email]`
-- `[TODO: paste approved About copy]`
-- `[TODO: Orion's approved wording for WC-11]`
-- `[TODO: Joe to approve]` for the terms page
+- `[TODO: approved About copy]`
+- `[TODO: approved wording]` on the privacy and terms pages
 - `[TODO: verified security reporting channel]`
 
 ## Safety and privacy

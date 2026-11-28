@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-28T11:03:59.028Z",
+  "checkedAt": "2026-11-28T11:41:03.813Z",
   "engine": "chromium",
   "results": [
     {
@@ -501,6 +501,18 @@
       "h1": 1,
       "overflow": 0,
       "reduced": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "css-animation-off",
+      "viewport": "phone-390",
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "heroOpacity": "1",
+      "nodeOpacity": "1",
+      "pktOpacity": "1",
+      "overflow": 0
     }
   ],
   "failures": []

@@ -12,7 +12,7 @@ const json=(res,status,body,extra={})=>res.writeHead(status,{'Content-Type':'app
 async function readBody(req){const chunks=[];let size=0;for await(const chunk of req){size+=chunk.length;if(size>12_000)throw Object.assign(new Error('Request too large.'),{status:413});chunks.push(chunk)}const raw=Buffer.concat(chunks).toString('utf8');return req.headers['content-type']?.includes('application/json')?JSON.parse(raw):Object.fromEntries(new URLSearchParams(raw))}
 
 export function sendmailNotification(record,{destination,sendmailPath=process.env.NEURONEST_SENDMAIL_PATH||'/usr/sbin/sendmail'}={}){
-  if(!destination||destination.includes('[TODO'))return Promise.reject(new Error('Notification address is not configured.'));
+  if(!destination||destination.includes('[TODO'))return Promise.reject(new Error('NOTIFY_EMAIL is not configured.'));
   const subject=`NeuroNest inquiry ${record.id}`;
   const body=`A new inquiry has been stored.\n\nReference: ${record.id}\nService: ${record.service}\nReceived: ${record.createdAt}\n\nOpen the protected inquiry store to review it.`;
   const message=`To: ${destination}\nFrom: ${process.env.NEURONEST_INQUIRY_FROM||destination}\nSubject: ${subject}\nContent-Type: text/plain; charset=UTF-8\n\n${body}\n`;
@@ -20,7 +20,7 @@ export function sendmailNotification(record,{destination,sendmailPath=process.en
 }
 
 export function createInquiryServer({config=defaultConfig,store,notify,rateLimit=createRateLimiter(),now=()=>Date.now()}={}){
-  const destination=process.env.NEURONEST_INQUIRY_NOTIFY_TO||config.notificationAddress;
+  const destination=process.env.NOTIFY_EMAIL;
   return http.createServer(async(req,res)=>{try{
     const url=new URL(req.url,'http://127.0.0.1');
     if(req.method!=='POST'||url.pathname!=='/api/inquiry')return json(res,404,{ok:false,message:'Not found.'});

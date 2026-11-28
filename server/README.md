@@ -5,7 +5,7 @@
 ## Activation prerequisites
 
 1. Replace the `[TODO]` values in `config/inquiry.json` only after Joe verifies the channel.
-2. Set `NEURONEST_INQUIRY_NOTIFY_TO` to the same verified notification address.
+2. Set `NOTIFY_EMAIL` on the VPS to the verified notification address. Never commit the real address; `.env.example` contains the only repository placeholder.
 3. Configure a sendmail-compatible mail transfer agent, or set `NEURONEST_SENDMAIL_PATH`.
 4. Set `enabled` to `true` only on the VPS after privacy, delivery, monitoring and rollback checks.
 5. Put the service behind the approved HTTPS reverse proxy. Do not expose the SQLite file or `.inquiry-data` directory.

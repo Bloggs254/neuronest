@@ -29,25 +29,34 @@ test('provisional commercial details and project status are unambiguous', () => 
   assert.doesNotMatch(html, /55,000|25,000|30,000|50,000|5,000 a month/);
   assert.match(html, /Indicative website packages/);
   assert.match(html, /Final scope and quotation/);
-  assert.match(html, /\[TODO: paste approved About copy\]/);
+  assert.match(html, /\[TODO: approved About copy\]/);
   assert.match(html, /In development/);
   assert.match(html, /Concept, not a client project/);
   assert.doesNotMatch(html, /<a[^>]+href="(?:https?:|[^\"]*guides\/)/);
   assert.doesNotMatch(html, /Bloggs|Joe|Follow on X|<script[^>]+ld\+json/);
 });
-test('N geometry, node colours and single-run motion respect the supplied brand', () => {
+test('N geometry and supplied CSS-only motion sequence respect the brand and fallbacks', () => {
   const light = read('assets/brand/neuronest-icon-light.svg');
   const dark = read('assets/brand/neuronest-icon-dark.svg');
   assert.equal(dark, light.replaceAll('#12102B','#FFFFFF'));
-  for (const svg of [light,dark,html]) {
+  for (const svg of [light,dark]) {
     assert.match(svg, /M52 150 V50 L148 150 V50/);
     assert.match(svg, /stroke-width="16"/);
     assert.equal([...svg.matchAll(/r="20"/g)].length, 4);
   }
+  const hero=html.match(/<div class="hero-vis">([\s\S]*?)<\/div>/)?.[1]||'';
+  assert.match(hero, /M52 150 V50 L148 150 V50/);
+  assert.match(hero, /stroke-width="16"/);
+  assert.equal([...hero.matchAll(/r="20"/g)].length,4);
+  assert.match(html,/class="wrap header-row hdr-in"/);
+  assert.match(html,/class="amb"/);
   const css = read('assets/css/site.css');
   assert.match(css, /prefers-reduced-motion:reduce/);
-  assert.doesNotMatch(css, /infinite|scroll-timeline|animation-timeline|box-shadow|linear-gradient|rotate\(/);
-  assert.match(css, /\.hero-mark \.node\.amber\{fill:var\(--amber\)/);
+  for(const name of ['draw','pop','drop','jolt','travel','hop','hdr-shrink','leave','catch'])assert.match(css,new RegExp(`@keyframes ${name}\\{`));
+  assert.match(css, /@supports \(animation-timeline:view\(\)\)/);
+  assert.match(css, /\.pkt\{display:none\}/);
+  assert.match(css, /\.hero-n:hover\{transform:scale\(1\.08\) rotate\(-6deg\)\}/);
+  assert.doesNotMatch(css, /url\([^)]*(?:gsap|animation)/i);
 });
 test('licensed WOFF2 files have correct signatures and pinned hashes', () => {
   const expected = JSON.parse(readFileSync(new URL('../docs/font-provenance.json',import.meta.url),'utf8'));
